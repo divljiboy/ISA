@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<servlet>
+		<servlet-name>StartController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.StartController</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LogoutController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.LogoutController</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.LoginController</servlet-class>
+	</servlet>
+
+
+
+	<servlet>
+		<servlet-name>LoginManagerController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.LoginManagerController</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LoginAdminController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.LoginAdminController</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RegisterGostController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.RegisterGostController</servlet-class>
+	</servlet>
+
+
+
+
+	<servlet>
+		<servlet-name>RezervacijaController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.RezervacijaController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>RezervacijaController</servlet-name>
+		<url-pattern>/RezervacijaController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>EditAccountController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.EditAccountController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>EditAccountController</servlet-name>
+		<url-pattern>/EditAccountController</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>PrijateljiController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.PrijateljiController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>PrijateljiController</servlet-name>
+		<url-pattern>/PrijateljiController</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RestoranAdminController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.RestoranAdminController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>RestoranAdminController</servlet-name>
+		<url-pattern>/RestoranAdminController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>DodajRestoranController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.DodajRestoranController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>DodajRestoranController</servlet-name>
+		<url-pattern>/DodajRestoranController</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>DodajMenadzeraController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.DodajMenadzeraController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>DodajMenadzeraController</servlet-name>
+		<url-pattern>/DodajMenadzeraController</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>RegisterGostController</servlet-name>
+		<url-pattern>/RegisterGostController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>LoginManagerController</servlet-name>
+		<url-pattern>/LoginManagerController</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LoginAdminController</servlet-name>
+		<url-pattern>/LoginAdminController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>StartController</servlet-name>
+		<url-pattern>/StartController</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/LogoutController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/LoginController</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>StartController</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404.jsp</location>
+	</error-page>
+
+</web-app>

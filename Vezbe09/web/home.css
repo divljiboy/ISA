@@ -1,0 +1,182 @@
+body {
+  background-color: #f15050;
+  font-family: 'Open Sans', sans-serif;
+}
+body #wrapper {
+  width: 100%;
+}
+body #wrapper ul {
+  box-sizing: border-box;
+  padding: 0;
+  height: 118px;
+  background-color: #fff;
+  font-size: 0px;
+}
+body #wrapper ul:hover li {
+  width: 13.33333%;
+}
+body #wrapper ul li {
+  display: inline-block;
+  float: left;
+  width: 12.66667%;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: border-box;
+  text-shadow: 0px 1px 3px white;
+  border-right: thin solid lightgray;
+}
+body #wrapper ul li:last-child {
+  border-right: none;
+}
+body #wrapper ul li:hover {
+  background: #e6e6e6;
+  width: 15.57143%;
+  -moz-box-shadow: inset 10px 10px 10px -10px rgba(0, 0, 0, 0.3), inset -10px 10px 10px -10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 10px 10px 10px -10px rgba(0, 0, 0, 0.3), inset -10px 10px 10px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 10px 10px 10px -10px rgba(0, 0, 0, 0.3), inset -10px 10px 10px -10px rgba(0, 0, 0, 0.3);
+}
+body #wrapper ul li a {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: border-box;
+  padding-top: 19px;
+  height: 118px;
+  text-decoration: none;
+  font-size: 38px;
+  color: gray;
+}
+body #wrapper ul li a:visited {
+  color: gray;
+}
+body #wrapper ul li div {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+
+form table {
+  float: left;
+  width: 100%;
+  font-family: 'Arial';
+  margin: 25px auto;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  border-bottom: 2px solid #00cccc;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
+}
+form table tr:hover {
+  background: #808080;
+}
+form table tr:hover td {
+  color: #555;
+}
+form table th, table td {
+  color: #c0c0c0;
+  border: 1px solid #eee;
+  padding: 12px 35px;
+  border-collapse: collapse;
+}
+form table th {
+  background: #ffffff;
+  color: #c0c0c0;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+form table th.last {
+  border-right: none;
+}
+
+form table td{
+	background: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input, textarea { 
+    padding: 9px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    width: 200px; 
+    background: #FFFFFF url('bg_form.png') left top repeat-x; 
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    } 
+   
+textarea { 
+    width: 400px; 
+    max-width: 400px; 
+    height: 150px; 
+    line-height: 150%; 
+    } 
+   
+input:hover, textarea:hover, 
+input:focus, textarea:focus { 
+    border-color: #C9C9C9; 
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
+    } 
+   
+.form label { 
+    margin-left: 10px; 
+    color: #999999; 
+    } 
+   
+.submit input { 
+    width: auto; 
+    padding: 9px 15px; 
+    background: #617798; 
+    border: 0; 
+    font-size: 14px; 
+    color: #FFFFFF; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    }
+
+#podaci {
+	float: left;
+	margin-left: 5%;
+	height: 50%;
+}
+
+img{
+	float: right;
+	margin-right: 20%;
+	margin-top: 2%;
+	width: 400px;
+	height: 400px;'
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
