@@ -14,7 +14,6 @@ public class InitClient {
 			Context ctx = new InitialContext();
 			Init init = (Init) ctx.lookup("InitBeanRemote");
 			init.init();
-			
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}
