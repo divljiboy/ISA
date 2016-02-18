@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDaoLocal;
@@ -38,6 +39,7 @@ public class DodajRestoranController extends HttpServlet {
 		String opis = null;
 		Integer brStolova = null;
 		Restoran restoran = null;
+		HttpSession session = req.getSession();
 		
 		if (req.getParameter("ime_restorana") != null
 				&& !req.getParameter("ime_restorana").equals("")) {
@@ -63,7 +65,7 @@ public class DodajRestoranController extends HttpServlet {
 		try {
 			if (!restoranDao.findAll().contains(restoran)) {
 				restoranDao.persist(restoran);
-				getServletContext().setAttribute("restorani", restoranDao.findAll());
+				session.setAttribute("restorani2", restoranDao.findAll());
 				getServletContext().getRequestDispatcher("/restorani.jsp").forward(req, resp);
 			}
 		} catch (Exception e) {

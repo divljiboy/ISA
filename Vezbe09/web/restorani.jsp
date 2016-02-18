@@ -1,7 +1,7 @@
 
 <%
 	response.setHeader("Cache-Control",
-			"no-cache, no-store, must-revalidate");
+	"no-cache, no-store, must-revalidate");
 	response.setHeader("Pragma", "no-cache");
 	response.setDateHeader("Expires", 0);
 %>
@@ -13,9 +13,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt"%>
 
-
-
 <fmt:setBundle basename="messages.messages" />
+
+
 
 
 <html>
@@ -53,25 +53,32 @@
 
 
 		<c:if test="${sessionScope.admin!=null}">
+			<jsp:useBean id="restorani2" type="java.util.List<Restoran>"
+				scope="session" />
+
 			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i
+						class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="prijatelji.jsp"><i class="fa fa-users"></i>
+				<li><a href="./InitKorisniciController"><i
+						class="fa fa-users"></i>
 						<div>
 							<fmt:message key="korisnici" />
 						</div></a></li>
-				<li><a href="menadzeri.jsp"><i class="fa fa-user"></i>
+				<li><a href="./InitMenadzerController"><i
+						class="fa fa-user"></i>
 						<div>
 							<fmt:message key="menadzeri" />
 						</div></a></li>
-				<li><a href="jelovnici.jsp"><i class="fa fa-glass"></i>
+				<li><a href="InitJelovniciController"><i
+						class="fa fa-glass"></i>
 						<div>
 							<fmt:message key="jelovnici" />
 						</div></a></li>
 
-				<li><a href="jela.jsp"><i class="fa fa-lemon-o"></i>
+				<li><a href="InitJelaController"><i class="fa fa-lemon-o"></i>
 						<div>
 							<fmt:message key="jela" />
 						</div></a></li>
@@ -101,8 +108,7 @@
 						</tr>
 					</thead>
 					<tbody>
-
-						<c:forEach items="${restorani}" var="restoran">
+						<c:forEach items="${restorani2}" var="restoran">
 							<tr>
 								<td>${restoran.naziv}</td>
 								<td>${restoran.opis}</td>
@@ -113,7 +119,7 @@
 						<th>&nbsp;</th>
 						<th>&nbsp;</th>
 						<th>&nbsp;</th>
-						<td><a href="dodajRestoran.jsp">Dodaj restoran</a> </td>
+						<td><a href="dodajRestoran.jsp">Dodaj restoran</a></td>
 					</tbody>
 				</table>
 			</form>
@@ -132,9 +138,12 @@
 
 
 		<c:if test="${sessionScope.gost!=null}">
+			<jsp:useBean id="restorani" type="java.util.List<Restoran>"
+				scope="session" />
 			<ul>
 
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i
+						class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
@@ -192,12 +201,17 @@
 
 
 		<c:if test="${sessionScope.menadzer!=null}">
+			<jsp:useBean id="restoran"
+				type="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran"
+				scope="session" />
+
 			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i
+						class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="#"><i class="fa fa-users"></i>
+				<li><a href="./InitJelovniciController"><i class="fa fa-users"></i>
 						<div>
 							<fmt:message key="prijatelji" />
 						</div></a></li>
@@ -219,6 +233,32 @@
 						</div> </a></li>
 
 			</ul>
+
+			<form>
+				<table>
+					<thead>
+						<tr>
+							<th>Ime restorana</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr align="center">
+							<td><a href="./KonfiguracijaMesta?id=${restoran.id}">${restoran.naziv}</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+
+
+
+
+
+
+
+
+
+
+
 		</c:if>
 
 	</div>

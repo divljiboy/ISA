@@ -51,7 +51,7 @@ public class LoginManagerController extends HttpServlet {
 			
 		} catch (EJBException e) {
 			if (e.getCause().getClass().equals(NoResultException.class)) {
-				response.sendRedirect(response.encodeRedirectURL("./loginMenadzer.jsp.jsp"));
+				response.sendRedirect(response.encodeRedirectURL("./loginMenadzer.jsp"));
 			} else {
 				throw e;
 			}

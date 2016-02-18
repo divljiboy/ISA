@@ -1,3 +1,4 @@
+<%@page import="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager"%>
 <%
 	response.setHeader("Cache-Control",
 			"no-cache, no-store, must-revalidate");
@@ -54,25 +55,26 @@
 
 
 		<c:if test="${sessionScope.admin!=null}">
-			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+		<jsp:useBean id="menadzeriSistema" type="java.util.List<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager>" scope="session" />
+			<ul >
+				<li><a href="./InitRestoranController"><i class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="prijatelji.jsp"><i class="fa fa-users"></i>
+				<li><a href="./InitKorisniciController"><i class="fa fa-users"></i>
 						<div>
 							<fmt:message key="korisnici" />
 						</div></a></li>
-				<li><a href="menadzeri.jsp"><i class="fa fa-user"></i>
+				<li><a href="./InitMenadzerController"><i class="fa fa-user"></i>
 						<div>
 							<fmt:message key="menadzeri" />
 						</div></a></li>
-				<li><a href="jelovnici.jsp"><i class="fa fa-glass"></i>
+				<li><a href="InitJelovniciController"><i class="fa fa-glass"></i>
 						<div>
 							<fmt:message key="jelovnici" />
 						</div></a></li>
 
-				<li><a href="jela.jsp"><i class="fa fa-lemon-o"></i>
+				<li><a href="InitJelaController"><i class="fa fa-lemon-o"></i>
 						<div>
 							<fmt:message key="jela" />
 						</div></a></li>
@@ -103,7 +105,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${menadzeri}" var="menadzer">
+						<c:forEach items="${menadzeriSistema}" var="menadzer">
 							<tr>
 								<td>${menadzer.firstName}</td>
 								<td>${menadzer.lastName}</td>

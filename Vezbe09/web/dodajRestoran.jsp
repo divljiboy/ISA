@@ -41,7 +41,7 @@
 
 		<c:if test="${sessionScope.admin!=null}">
 			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
@@ -159,7 +159,7 @@
 
 		<c:if test="${sessionScope.menadzer!=null}">
 			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>

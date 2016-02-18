@@ -1,7 +1,9 @@
 package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -18,5 +20,20 @@ public class Manager extends User{
 	public Manager(){
 		super();
 	}
+	
+	
+	@OneToOne()
+	@JoinColumn(name = "restoran_id" ,referencedColumnName="restoran_id", nullable = false)
+	public Restoran restoran;
+
+	public Restoran getRestoran() {
+		return restoran;
+	}
+
+	public void setRestoran(Restoran restoran) {
+		this.restoran = restoran;
+	}
+	
+	
 
 }

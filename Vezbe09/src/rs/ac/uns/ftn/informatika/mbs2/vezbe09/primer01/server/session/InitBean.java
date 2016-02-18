@@ -89,30 +89,95 @@ public class InitBean implements Init {
 		prijateljstvo3.setPrijatelj2(gost6);
 		em.persist(prijateljstvo3);
 
-		Manager manager = new Manager();
-		manager.setFirstName("Zika");
-		manager.setLastName("Petrovic");
-		manager.setUsername("menadzer");
-		manager.setPassword("menadzer");
-		em.persist(manager);
+		
+		
+		
 
 		Restoran restoran1 = new Restoran();
 		restoran1.setNaziv("Plava Frajla");
 		restoran1.setOpis("Domaca kuhinja");
 		restoran1.setBroj_stolova(20);
+	//	restoran1.setMenadzeri(menadzeri1);
 		em.persist(restoran1);
 
 		Restoran restoran2 = new Restoran();
 		restoran2.setNaziv("Panceta");
 		restoran2.setOpis("Mediteranska kuhinja");
 		restoran2.setBroj_stolova(20);
+	//	restoran2.setMenadzeri(menadzeri2);
 		em.persist(restoran2);
 
 		Restoran restoran3 = new Restoran();
 		restoran3.setNaziv("Fontana");
 		restoran3.setOpis("Morska");
+	//	restoran3.setMenadzeri(menadzeri3);
 		restoran3.setBroj_stolova(20);
 		em.persist(restoran3);
+		
+		
+		
+		
+		
+
+		Manager manager = new Manager();
+		manager.setFirstName("Zika");
+		manager.setLastName("Petrovic");
+		manager.setUsername("menadzer");
+		manager.setPassword("menadzer");
+		manager.setRestoran(restoran1);
+		em.persist(manager);
+		
+		
+		
+		Manager manager1 = new Manager();
+		manager1.setFirstName("Mika");
+		manager1.setLastName("Mikic");
+		manager1.setUsername("menadzer1");
+		manager1.setPassword("menadzer1");
+		manager1.setRestoran(restoran2);
+		em.persist(manager1);
+		
+		
+		Manager manager2 = new Manager();
+		manager2.setFirstName("Pera");
+		manager2.setLastName("Peric");
+		manager2.setUsername("menadzer2");
+		manager2.setPassword("menadzer2");
+		manager2.setRestoran(restoran3);
+		em.persist(manager2);
+		
+		
+		Set<Manager>menadzeri1 = new HashSet<Manager>();
+		menadzeri1.add(manager);
+		
+		Set<Manager>menadzeri2 = new HashSet<Manager>();
+		menadzeri2.add(manager2);
+		
+		
+		
+		Set<Manager>menadzeri3 = new HashSet<Manager>();
+		menadzeri3.add(manager1);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 		Jelovnik jelovnik1 = new Jelovnik();
 		jelovnik1.setNaziv("Meni1");
@@ -126,21 +191,21 @@ public class InitBean implements Init {
 		jelovnik3.setNaziv("Meni3");
 		em.persist(jelovnik3);
 
-		Set<Jelovnik> meni = new HashSet<Jelovnik>();
+		HashSet<Jelovnik> meni = new HashSet<Jelovnik>();
 		meni.add(jelovnik1);
 		meni.add(jelovnik3);
 		meni.add(jelovnik2);
 
-		Set<Jelovnik> meni1 = new HashSet<Jelovnik>();
+		HashSet<Jelovnik> meni1 = new HashSet<Jelovnik>();
 		meni1.add(jelovnik1);
 		meni1.add(jelovnik2);
 
-		Set<Jelovnik> meni2 = new HashSet<Jelovnik>();
+		HashSet<Jelovnik> meni2 = new HashSet<Jelovnik>();
 		meni2.add(jelovnik2);
 
-		restoran1.setJelovnik(meni);
-		restoran2.setJelovnik(meni1);
-		restoran3.setJelovnik(meni2);
+		restoran1.addJelovnik(jelovnik1);
+		restoran2.addJelovnik(jelovnik2);
+		restoran3.addJelovnik(jelovnik3);
 
 		Jelo jelo1 = new Jelo();
 		jelo1.setNaziv("Sarmica od zelja");

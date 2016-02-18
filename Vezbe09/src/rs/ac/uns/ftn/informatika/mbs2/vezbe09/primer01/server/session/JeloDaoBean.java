@@ -15,4 +15,5 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelo;
 @Local(JeloDaoLocal.class)
 public class JeloDaoBean extends GenericDaoBean<Jelo, Integer> implements JeloDaoLocal{
 
+	
 }

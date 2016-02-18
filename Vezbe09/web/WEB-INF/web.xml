@@ -114,19 +114,102 @@
 	</servlet-mapping>
 
 
+	<servlet>
+		<servlet-name>RestoranMenadzerController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.RestoranMenadzerController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>RestoranMenadzerController</servlet-name>
+		<url-pattern>/RestoranMenadzerController</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>InitRestoranController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.InitRestoranController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>InitRestoranController</servlet-name>
+		<url-pattern>/InitRestoranController</url-pattern>
+	</servlet-mapping>
 
 
 
 
 
+	<servlet>
+		<servlet-name>InitKorisniciController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.InitKorisniciController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>InitKorisniciController</servlet-name>
+		<url-pattern>/InitKorisniciController</url-pattern>
+	</servlet-mapping>
 
 
 
 
 
+	<servlet>
+		<servlet-name>InitMenadzerController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.InitMenadzerController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>InitMenadzerController</servlet-name>
+		<url-pattern>/InitMenadzerController</url-pattern>
+	</servlet-mapping>
 
 
 
+
+
+	<servlet>
+		<servlet-name>InitJelaController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.InitJelaController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>InitJelaController</servlet-name>
+		<url-pattern>/InitJelaController</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>InitJelovniciController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.InitJelovniciController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>InitJelovniciController</servlet-name>
+		<url-pattern>/InitJelovniciController</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<servlet>
+		<servlet-name>KonfiguracijaMesta</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.KonfiguracijaMesta</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>KonfiguracijaMesta</servlet-name>
+		<url-pattern>/KonfiguracijaMesta</url-pattern>
+	</servlet-mapping>
 
 
 

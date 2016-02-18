@@ -39,25 +39,25 @@
 
 
 		<c:if test="${sessionScope.admin!=null}">
-			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+						<ul >
+				<li><a href="./InitRestoranController"><i class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="prijatelji.jsp"><i class="fa fa-users"></i>
+				<li><a href="./InitKorisniciController"><i class="fa fa-users"></i>
 						<div>
 							<fmt:message key="korisnici" />
 						</div></a></li>
-				<li><a href="menadzeri.jsp"><i class="fa fa-user"></i>
+				<li><a href="./InitMenadzerController"><i class="fa fa-user"></i>
 						<div>
 							<fmt:message key="menadzeri" />
 						</div></a></li>
-				<li><a href="jelovnici.jsp"><i class="fa fa-glass"></i>
+				<li><a href="InitJelovniciController"><i class="fa fa-glass"></i>
 						<div>
 							<fmt:message key="jelovnici" />
 						</div></a></li>
 
-				<li><a href="jela.jsp"><i class="fa fa-lemon-o"></i>
+				<li><a href="InitJelaController"><i class="fa fa-lemon-o"></i>
 						<div>
 							<fmt:message key="jela" />
 						</div></a></li>
@@ -98,6 +98,10 @@
 						<td>Lozinka:</td>
 						<td><input type="text" name="lozinka" required="required"></td>
 					</tr>
+					<tr>
+						<td>Id restorana:</td>
+						<td><input type="number" name="id_restorana" required="required"></td>
+					</tr>
 
 
 					<tr>
@@ -109,7 +113,6 @@
 					</tr>
 
 				</table>
-				<input type="hidden" name="id" value="${admin.id}">
 
 			</form>
 
@@ -159,7 +162,8 @@
 		<c:if test="${sessionScope.gost!=null}">
 			<ul>
 
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i
+						class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
@@ -196,7 +200,8 @@
 
 		<c:if test="${sessionScope.menadzer!=null}">
 			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i
+						class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>

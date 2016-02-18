@@ -7,9 +7,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager;
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoLocal;
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDaoLocal;
 
 /**
  * 
@@ -22,11 +25,17 @@ public class DodajMenadzeraController extends HttpServlet {
 
 	@EJB
 	ManagerDaoLocal managerDao;
+	
+	@EJB
+	RestoranDaoLocal restoranDao;
+	
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
+		HttpSession session = req.getSession();
+		
 		String menadzer_id = req.getParameter("id");
 		Integer restoran_id = Integer.parseInt(menadzer_id);
 		if (restoran_id != null) {
@@ -36,7 +45,7 @@ public class DodajMenadzeraController extends HttpServlet {
 		}
 		
 
-		getServletContext().setAttribute("menadzeri", managerDao.findAll());
+		session.setAttribute("menadzeriSistema", managerDao.findAll());
 		getServletContext().getRequestDispatcher("/menadzeri.jsp").forward(req,
 				resp);
 
@@ -49,7 +58,9 @@ public class DodajMenadzeraController extends HttpServlet {
 		String prezime = null;
 		String username = null;
 		String sifra = null;
+		String id_restorana = null;
 		Manager manager = null;
+		HttpSession session = req.getSession();
 
 		if (req.getParameter("ime_menadzera") != null
 				&& !req.getParameter("ime_menadzera").equals("")) {
@@ -67,6 +78,15 @@ public class DodajMenadzeraController extends HttpServlet {
 				&& !req.getParameter("lozinka").equals("")) {
 			sifra = req.getParameter("lozinka");
 		}
+		
+		if(req.getParameter("id_restorana")!=null && !req.getParameter("id_restorana").equals("")){
+			id_restorana = req.getParameter("id_restorana");
+			
+		}
+		
+		
+		int id_r = Integer.parseInt(id_restorana);
+		Restoran r = restoranDao.findById(id_r);
 
 		if (ime != null && prezime != null && username != null && sifra != null) {
 			manager = new Manager();
@@ -74,12 +94,20 @@ public class DodajMenadzeraController extends HttpServlet {
 			manager.setLastName(prezime);
 			manager.setUsername(username);
 			manager.setPassword(sifra);
+			manager.setRestoran(r);
+				
 		}
+		
+		System.out.println(manager.getFirstName());
+		System.out.println(manager.getLastName());
+		System.out.println(manager.getUsername());
+		System.out.println(manager.getPassword());
+		System.out.println(managerDao.findAll().size());
 
 		try {
 			if (!managerDao.findAll().contains(manager)) {
 				managerDao.persist(manager);
-				getServletContext().setAttribute("menadzeri",
+				session.setAttribute("menadzeriSistema",
 						managerDao.findAll());
 				getServletContext().getRequestDispatcher("/menadzeri.jsp")
 						.forward(req, resp);

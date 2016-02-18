@@ -40,18 +40,32 @@
 
 		<c:if test="${sessionScope.admin!=null}">
 			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i
+						class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="prijatelji.jsp"><i class="fa fa-users"></i>
+				<li><a href="./InitKorisniciController"><i
+						class="fa fa-users"></i>
 						<div>
-							<fmt:message key="prijatelji" />
+							<fmt:message key="korisnici" />
 						</div></a></li>
-				<li><a href="menadzeri.jsp"><i class="fa fa-user"></i>
+				<li><a href="./InitMenadzerController"><i
+						class="fa fa-user"></i>
 						<div>
-							<fmt:message key="mojNalog" />
+							<fmt:message key="menadzeri" />
 						</div></a></li>
+				<li><a href="InitJelovniciController"><i
+						class="fa fa-glass"></i>
+						<div>
+							<fmt:message key="jelovnici" />
+						</div></a></li>
+
+				<li><a href="InitJelaController"><i class="fa fa-lemon-o"></i>
+						<div>
+							<fmt:message key="jela" />
+						</div></a></li>
+
 				<li><a href="home.jsp"><i class="fa fa-rocket"></i>
 						<div>
 							<c:out value="${admin.firstName}"></c:out>
