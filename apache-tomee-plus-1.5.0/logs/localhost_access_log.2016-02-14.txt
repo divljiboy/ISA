@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [14/Feb/2016:20:21:19 +0100] "GET /Vezbe09/ HTTP/1.1" 200 579
+0:0:0:0:0:0:0:1 - - [14/Feb/2016:20:21:21 +0100] "GET /Vezbe09/loginMenager.jsp HTTP/1.1" 200 676
+0:0:0:0:0:0:0:1 - - [14/Feb/2016:20:21:31 +0100] "POST /Vezbe09/LoginMenagerController HTTP/1.1" 200 1497
+0:0:0:0:0:0:0:1 - - [14/Feb/2016:20:21:31 +0100] "GET /Vezbe09/mojcss.css HTTP/1.1" 200 7973
+0:0:0:0:0:0:0:1 - - [14/Feb/2016:20:21:31 +0100] "GET /Vezbe09/script.js HTTP/1.1" 404 329
+0:0:0:0:0:0:0:1 - - [14/Feb/2016:20:21:31 +0100] "GET /Vezbe09/images/bg.png HTTP/1.1" 404 329
+0:0:0:0:0:0:0:1 - - [14/Feb/2016:20:26:02 +0100] "GET /Vezbe09/LogoutController HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Feb/2016:20:26:02 +0100] "GET /Vezbe09/login.jsp HTTP/1.1" 200 740
