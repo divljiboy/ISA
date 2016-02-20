@@ -164,9 +164,7 @@
 
 
 		<c:if test="${sessionScope.menadzer!=null}">
-		<jsp:useBean id="jelovnici"
-				type="java.util.List<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelovnik>"
-				scope="session" />
+		
 			<ul>
 				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
 						<div>

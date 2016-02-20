@@ -20,7 +20,6 @@
 	</servlet>
 
 
-
 	<servlet>
 		<servlet-name>LoginManagerController</servlet-name>
 		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.LoginManagerController</servlet-class>
@@ -61,6 +60,23 @@
 		<servlet-name>EditAccountController</servlet-name>
 		<url-pattern>/EditAccountController</url-pattern>
 	</servlet-mapping>
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>DodajPrijatelja</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.DodajPrijatelja</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>DodajPrijatelja</servlet-name>
+		<url-pattern>/DodajPrijatelja</url-pattern>
+	</servlet-mapping>
+	
+	
 
 
 

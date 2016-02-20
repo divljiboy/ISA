@@ -136,6 +136,7 @@
 			DROP TABLE IF EXISTS sto;
 			DROP TABLE IF EXISTS restoran_jelovnik;
 			DROP TABLE IF EXISTS jelovnik_jelo;
+			DROP TABLE IF EXISTS prijateljstva;
 						
 			
 			

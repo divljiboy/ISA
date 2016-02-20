@@ -13,7 +13,6 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelo;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelovnik;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager;
-import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Prijateljstvo;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
 
 @Stateless
@@ -37,59 +36,63 @@ public class InitBean implements Init {
 		gost1.setLastName("Mitrovic");
 		gost1.setUsername("gost");
 		gost1.setPassword("gost");
-		em.persist(gost1);
+		//em.persist(gost1);
 
 		Gost gost2 = new Gost();
 		gost2.setFirstName("Lola");
 		gost2.setLastName("Bojic");
 		gost2.setUsername("gost2");
 		gost2.setPassword("gost2");
-		em.persist(gost2);
+		//em.persist(gost2);
 
 		Gost gost3 = new Gost();
 		gost3.setFirstName("Pera");
 		gost3.setLastName("Peric");
 		gost3.setUsername("gost3");
 		gost3.setPassword("gost3");
-		em.persist(gost3);
+		//em.persist(gost3);
 
 		Gost gost4 = new Gost();
 		gost4.setFirstName("Boba");
 		gost4.setLastName("Mikic");
 		gost4.setUsername("gost4");
 		gost4.setPassword("gost4");
-		em.persist(gost4);
+		//em.persist(gost4);
 
 		Gost gost5 = new Gost();
 		gost5.setFirstName("Zivoin");
 		gost5.setLastName("Misic");
 		gost5.setUsername("gost5");
 		gost5.setPassword("gost5");
-		em.persist(gost5);
+		//em.persist(gost5);
 
 		Gost gost6 = new Gost();
 		gost6.setFirstName("Moma");
 		gost6.setLastName("Mitkovic");
 		gost6.setUsername("gost6");
 		gost6.setPassword("gost6");
-		em.persist(gost6);
-
-		Prijateljstvo prijateljstvo1 = new Prijateljstvo();
-		prijateljstvo1.setGost(gost1);
-		prijateljstvo1.setPrijatelj2(gost2);
-		em.persist(prijateljstvo1);
-
-		Prijateljstvo prijateljstvo2 = new Prijateljstvo();
-		prijateljstvo2.setGost(gost1);
-		prijateljstvo2.setPrijatelj2(gost3);
-		em.persist(prijateljstvo2);
-
-		Prijateljstvo prijateljstvo3 = new Prijateljstvo();
-		prijateljstvo3.setGost(gost5);
-		prijateljstvo3.setPrijatelj2(gost6);
-		em.persist(prijateljstvo3);
+		//em.persist(gost6);
 
 		
+		Set<Gost> prijatelji=new HashSet<Gost>();
+		prijatelji.add(gost2);
+		prijatelji.add(gost3);
+		prijatelji.add(gost4);
+		gost1.setPrijatelji(prijatelji);
+		Set<Gost> prijatelji2=new HashSet<Gost>();
+		prijatelji2.add(gost1);
+		prijatelji2.add(gost3);
+		gost2.setPrijatelji(prijatelji2);
+		Set<Gost> prijatelji3=new HashSet<Gost>();
+		prijatelji2.add(gost1);
+		
+		gost3.setPrijatelji(prijatelji3);
+		em.persist(gost1);
+		em.persist(gost2);
+		em.persist(gost3);
+		em.persist(gost4);
+		em.persist(gost5);
+		em.persist(gost6);
 		
 		
 
@@ -203,9 +206,9 @@ public class InitBean implements Init {
 		HashSet<Jelovnik> meni2 = new HashSet<Jelovnik>();
 		meni2.add(jelovnik2);
 
-		restoran1.addJelovnik(jelovnik1);
-		restoran2.addJelovnik(jelovnik2);
-		restoran3.addJelovnik(jelovnik3);
+		restoran1.setJelovnik(meni1);
+		restoran2.setJelovnik(meni2);
+		restoran3.setJelovnik(meni);
 
 		Jelo jelo1 = new Jelo();
 		jelo1.setNaziv("Sarmica od zelja");

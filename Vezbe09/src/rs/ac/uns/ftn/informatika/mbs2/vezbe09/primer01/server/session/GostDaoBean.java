@@ -2,6 +2,7 @@ package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session;
 
 
 import java.util.List;
+import java.util.Set;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
@@ -30,14 +31,14 @@ public class GostDaoBean extends GenericDaoBean<Gost, Integer> implements
 		return result;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
-	public List<Gost> findPrijatelje(int gostId) {
-		Query q= em.createNamedQuery("findPrijatelje");
-		q.setParameter("korisnik.id", gostId);
-		List<Gost> prijatelji =(List<Gost>) q.getSingleResult();
-		return prijatelji;
+	public Set<Gost> findPrijatelji(Gost g) {
+		Gost gost=em.merge(g);
+		return gost.getPrijatelji();
 	}
+
+	
+	
 	
 
 

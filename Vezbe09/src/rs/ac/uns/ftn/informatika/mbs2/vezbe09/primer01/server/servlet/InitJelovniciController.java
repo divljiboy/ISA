@@ -4,6 +4,8 @@ import javax.ejb.EJB;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
 
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager;
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.JelovnikDaoLocal;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDaoLocal;
 
@@ -28,10 +30,11 @@ public class InitJelovniciController extends HttpServlet {
 		}
 		
 		if(session.getAttribute("menadzer")!=null){
-		//	Manager m = (Manager) session.getAttribute("menadzer");
-	//		Restoran r = m.getRestoran();
+			Manager m=(Manager) session.getAttribute("menadzer");
+			Restoran r=m.getRestoran();
 			
-			session.setAttribute("jelovnici", restoranDao.findMeniuRestoranu());
+			session.setAttribute("jelovnici",restoranDao.findMeniuRestoranu(r));
+			System.out.println(restoranDao.findMeniuRestoranu(r).size());
 			getServletContext().getRequestDispatcher("/jelovnici.jsp").forward(req, resp);
 		}
 		

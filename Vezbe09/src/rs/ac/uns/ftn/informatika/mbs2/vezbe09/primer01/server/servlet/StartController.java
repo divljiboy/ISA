@@ -45,20 +45,7 @@ public class StartController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-	
-	//getServletContext().setAttribute("jela", jeloDao.findAll());		
-//	getServletContext().setAttribute("jelovnici", jelovnikDao.findAll());		
 
-//	getServletContext().setAttribute("menadzeri", managerDao.findAll());		
-//	getServletContext().setAttribute("korisnici", gostDao.findAll());
-//	getServletContext().setAttribute("restorani", restoranDao.findAll());
-	
-
-	
-//	Restoran restoran_id = managerDao.findById(m).getRestoran();
-		
-//	req.setAttribute("nesto", restoran_id);
-//	System.out.println(restoran_id);
 	getServletContext().getRequestDispatcher("/start.jsp").forward(req, resp);
 			
 }
