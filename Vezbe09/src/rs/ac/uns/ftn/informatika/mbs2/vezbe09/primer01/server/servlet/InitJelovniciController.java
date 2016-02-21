@@ -32,9 +32,10 @@ public class InitJelovniciController extends HttpServlet {
 		if(session.getAttribute("menadzer")!=null){
 			Manager m=(Manager) session.getAttribute("menadzer");
 			Restoran r=m.getRestoran();
-			
+			session.setAttribute("nisuJelovnici",restoranDao.findAllKojiNisu(r, jelovnikDao.findAll()));
+			session.setAttribute("sviJelovnici",jelovnikDao.findAll() );
 			session.setAttribute("jelovnici",restoranDao.findMeniuRestoranu(r));
-			System.out.println(restoranDao.findMeniuRestoranu(r).size());
+			
 			getServletContext().getRequestDispatcher("/jelovnici.jsp").forward(req, resp);
 		}
 		

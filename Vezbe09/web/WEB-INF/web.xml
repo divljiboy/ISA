@@ -48,6 +48,34 @@
 		<servlet-name>RezervacijaController</servlet-name>
 		<url-pattern>/RezervacijaController</url-pattern>
 	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>DodajJeloController</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.DodajJeloController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>DodajJeloController</servlet-name>
+		<url-pattern>/DodajJeloController</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>ObrisiJelovnik</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.ObrisiJelovnik</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>ObrisiJelovnik</servlet-name>
+		<url-pattern>/ObrisiJelovnik</url-pattern>
+	</servlet-mapping>
+
+
 
 
 	<servlet>
@@ -61,6 +89,31 @@
 		<url-pattern>/EditAccountController</url-pattern>
 	</servlet-mapping>
 	
+	
+	<servlet>
+		<servlet-name>IzbrisiPrijatelja</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.IzbrisiPrijatelja</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>IzbrisiPrijatelja</servlet-name>
+		<url-pattern>/IzbrisiPrijatelja</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>DodajJelovnik</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.DodajJelovnik</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>DodajJelovnik</servlet-name>
+		<url-pattern>/DodajJelovnik</url-pattern>
+	</servlet-mapping>
 	
 	
 	

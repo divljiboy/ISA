@@ -40,10 +40,18 @@ public class Gost extends User implements Serializable{
 		this.prijatelji = prijatelji;
 	}
 
-	public void dodajPrijatelja(Gost g) {
+	public void dodajPrijateljaa(Gost g) {
 
 		if (!prijatelji.contains(g)) {
 				prijatelji.add(g);		
+		}
+
+	}
+	public void izbrisiPrijateljaa(Gost g) {
+
+		if (prijatelji.contains(g)) {
+			System.out.println("Sadrzi ga");
+				prijatelji.remove(g);		
 		}
 
 	}

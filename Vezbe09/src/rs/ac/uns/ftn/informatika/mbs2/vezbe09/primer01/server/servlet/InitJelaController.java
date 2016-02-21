@@ -28,6 +28,12 @@ public class InitJelaController extends HttpServlet {
 			getServletContext().getRequestDispatcher("/jela.jsp").forward(req,
 					resp);
 		}
+		if (session.getAttribute("menadzer") != null) {
+			session.setAttribute("svaJela", jeloDao.findAll());
+			getServletContext().getRequestDispatcher("/DodajJelo.jsp")
+			.forward(req, resp);
+		}
+		
 	}
 
 }

@@ -3,6 +3,7 @@ package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity;
 import static javax.persistence.GenerationType.IDENTITY;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -109,17 +110,17 @@ public class Jelovnik implements Serializable{
 		}
 
 	}
-	
-	public void addJelo(Jelo jelo){
-		if(jelo == null)
+	*/
+	public void addJelo(Jelo jeloo){
+		if(jeloo == null)
 			return;
-		if(this.jela== null)
-			this.jela = new HashSet<Jelo>();
-		if(!this.jela.contains(jelo)){
-			this.jela.add(jelo);
+		if(this.jelo== null)
+			this.jelo = new HashSet<Jelo>();
+		if(!this.jelo.contains(jelo)){
+			this.jelo.add(jeloo);
 		}
 	}
-	
+	/*
 	///Divljaku je glupavo
 	public void setJelo(Collection<Jelo> jela){
 		removeAllJela();

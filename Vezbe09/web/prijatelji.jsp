@@ -42,7 +42,7 @@
 	<c:redirect url="./start.jsp" />
 </c:if>
 
-<body>
+<body onload="pr()">
 	<div id="wrapper">
 
 
@@ -154,14 +154,14 @@
 					<th>Ime</th>
 					<th>Prezime</th>
 					<th>&nbsp;</th>
-					<th>&nbsp;</th>
+					
 				</tr>
 
 				<c:forEach items="${prijatelji}" var="prijatelj">
 					<tr>
 						<td>${prijatelj.firstName}</td>
 						<td>${prijatelj.lastName}</td>
-
+						<td><a href="./IzbrisiPrijatelja?id=${prijatelj.id}">Izbrisi</a></td>
 					</tr>
 				</c:forEach>
 			</table>
@@ -177,7 +177,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${korisniciSistema}" var="korisnik">
+						<c:forEach items="${nisuprijatelji}" var="korisnik">
 							<tr>
 								<td>${korisnik.firstName}</td>
 								<td>${korisnik.lastName}</td>

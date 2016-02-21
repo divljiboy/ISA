@@ -15,4 +15,7 @@ public interface GostDaoLocal extends GenericDaoLocal<Gost, Integer> {
 
 	 Gost findGostSaKorisnickimImenomILozinkom(String korisnickoIme,String lozinka);
 	 Set<Gost> findPrijatelji(Gost g);
+	 void dodajPrijatelja(Gost g,Gost g1);
+	 void izbrisiPrijatelja(Gost g,Gost g1);
+	 Set<Gost> findAllKojiMuNisuPrijatelji(Gost g);
 }

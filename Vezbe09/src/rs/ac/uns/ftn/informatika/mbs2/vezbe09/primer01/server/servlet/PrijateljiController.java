@@ -26,34 +26,23 @@ public class PrijateljiController extends HttpServlet {
 
 	@EJB
 	GostDaoLocal gostDao;
-	
-	
 
-	protected void doGet(javax.servlet.http.HttpServletRequest req,
-			javax.servlet.http.HttpServletResponse resp)
+	protected void doGet(javax.servlet.http.HttpServletRequest req, javax.servlet.http.HttpServletResponse resp)
 			throws javax.servlet.ServletException, java.io.IOException {
 
 		HttpSession session = req.getSession();
 		Gost g = (Gost) session.getAttribute("gost");
-		
-		
-		
-		
-		
-		
+
 		Set<Gost> p = (Set<Gost>) gostDao.findPrijatelji(g);
-		
-			
+
 		req.setAttribute("prijatelji", p);
-		session.setAttribute("korisniciSistema", gostDao.findAll());
+		session.setAttribute("nisuprijatelji", gostDao.findAllKojiMuNisuPrijatelji(g));
 		getServletContext().getRequestDispatcher("/prijatelji.jsp").forward(req, resp);
-		
-		
+
 	};
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		super.doPost(req, resp);
 	}

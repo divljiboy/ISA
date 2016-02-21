@@ -207,6 +207,10 @@
 						<div>
 							<fmt:message key="mojNalog" />
 						</div></a></li>
+				<li><a href="./InitJelaController"><i class="fa fa-times-circle-o"></i>
+						<div>
+							<fmt:message key="jelo" />
+						</div></a></li>
 
 				<li><a href="home.jsp"><i
 						class="fa fa-paper-plane"></i>

@@ -34,7 +34,7 @@
 	<c:redirect url="./start.jsp" />
 </c:if>
 
-<body>
+<body >
 	<div id="wrapper">
 
 
@@ -208,7 +208,30 @@
 							<tr>
 								<td>${jelovnik.naziv}</td>
 								<td>${jelovnik.restorani.id}</td>
-								<td><a href="#">Izmeni</a></td>
+								<td><a href="./ObrisiJelovnik?id=${jelovnik.id}">Obrisi</a></td>
+							</tr>
+
+						</c:forEach>
+							<th>&nbsp;</th>
+							<th>&nbsp;</th>
+							
+					</tbody>
+				</table>
+			</form>
+			<form>
+				<table>
+					<thead>
+						<tr>
+							<th>Naziv</th>
+							<th>Opis</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${nisuJelovnici}" var="jelovnik">
+							<tr>
+								<td>${jelovnik.naziv}</td>
+								<td>${jelovnik.restorani.id}</td>
+                                <td><a href="./DodajJelovnik?id=${jelovnik.id}">Dodaj</a></td>
 							</tr>
 
 						</c:forEach>
@@ -216,7 +239,6 @@
 					</tbody>
 				</table>
 			</form>
-			
 			
 			
 			

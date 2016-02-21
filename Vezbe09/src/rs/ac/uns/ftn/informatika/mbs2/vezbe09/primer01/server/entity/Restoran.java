@@ -120,6 +120,22 @@ public class Restoran implements Serializable{
 	public void setJelovnik(Set<Jelovnik> jelovnik) {
 		this.jelovnik = jelovnik;
 	}
+	public void dodajJelovnik(Jelovnik j)
+	{
+		if(!jelovnik.contains(j))
+		{
+			jelovnik.add(j);
+		}
+		
+	}
+	public void izbrisiJelovnik(Jelovnik j)
+	{
+		if(jelovnik.contains(j))
+		{
+			jelovnik.remove(j);
+		}
+		
+	}
 
 	
 }
