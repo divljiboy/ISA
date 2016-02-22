@@ -59,7 +59,7 @@ window.onload= function(){
 </c:if>
 
 <body onload="pr()">
-	<div id="wrapper">
+	<div id='cssmenu'>
 
 		<c:if test="${sessionScope.admin!=null}">
 			<jsp:useBean id="restorani2" type="java.util.List<Restoran>"

@@ -48,7 +48,7 @@
 </c:if>
 
 <body onload="pr()">
-	<div id="wrapper">
+	<div id='cssmenu'>
 
 
 

@@ -34,7 +34,7 @@
 </c:if>
 
 <body>
-	<div id="wrapper">
+	<div id='cssmenu'>
 
 
 

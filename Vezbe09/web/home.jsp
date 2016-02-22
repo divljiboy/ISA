@@ -28,7 +28,7 @@
 </c:if>
 
 <body>
-	<div id="wrapper">
+	<div id='cssmenu'>
 
 		<c:if test="${sessionScope.admin!=null}">
 			<ul >
