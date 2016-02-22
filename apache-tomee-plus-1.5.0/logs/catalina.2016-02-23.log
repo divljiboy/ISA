@@ -1,0 +1,1186 @@
+Feb 23, 2016 12:01:29 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jdk1.7.0_79\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;.
+Feb 23, 2016 12:01:30 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Feb 23, 2016 12:01:30 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Feb 23, 2016 12:01:32 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+Feb 23, 2016 12:01:32 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: ********************************************************************************
+Feb 23, 2016 12:01:32 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: OpenEJB http://openejb.apache.org/
+Feb 23, 2016 12:01:32 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Startup: Tue Feb 23 00:01:32 CET 2016
+Feb 23, 2016 12:01:32 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Copyright 1999-2012 (C) Apache OpenEJB Project, All Rights Reserved.
+Feb 23, 2016 12:01:32 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Version: 4.5.0
+Feb 23, 2016 12:01:32 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Build date: 20120928
+Feb 23, 2016 12:01:33 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Build time: 08:12
+Feb 23, 2016 12:01:33 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: ********************************************************************************
+Feb 23, 2016 12:01:33 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: openejb.home = C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0
+Feb 23, 2016 12:01:33 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: openejb.base = C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0
+Feb 23, 2016 12:01:33 AM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFO: Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@1c9219a
+Feb 23, 2016 12:01:33 AM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFO: Succeeded in installing singleton service
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.ConfigurationFactory init
+INFO: openejb configuration file is 'C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\conf\tomee.xml'
+Feb 23, 2016 12:01:33 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.provider.default=org.apache.tomee'
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My Unmanaged DataSource, type=Resource, provider-id=Default JDBC Database)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My DataSource, type=Resource, provider-id=Default JDBC Database)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My Singleton Container, type=Container, provider-id=Default Singleton Container)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My Stateful Container, type=Container, provider-id=Default Stateful Container)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My Stateless Container, type=Container, provider-id=Default Stateless Container)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.system.apps=true'
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: null
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Using openejb.deploymentId.format '{ejbName}'
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb openejb/Deployer: EjbDeployment(deployment-id=openejb/Deployer)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb openejb/ConfigurationInfo: EjbDeployment(deployment-id=openejb/ConfigurationInfo)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb MEJB: EjbDeployment(deployment-id=MEJB)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "openejb" loaded.
+Feb 23, 2016 12:01:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating TransactionManager(id=Default Transaction Manager)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating SecurityService(id=Tomcat Security Service)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Resource(id=My Unmanaged DataSource)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Resource(id=My DataSource)
+Feb 23, 2016 12:01:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Container(id=My Singleton Container)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Container(id=My Stateful Container)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.core.stateful.SimplePassivater init
+INFO: Using directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\temp for stateful session passivation
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Container(id=My Stateless Container)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: openejb
+Feb 23, 2016 12:01:34 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.jndiname.format={deploymentId}{interfaceType.openejbLegacyName}'
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=openejb/DeployerBusinessRemote) --> Ejb(deployment-id=openejb/Deployer)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/Deployer!org.apache.openejb.assembler.Deployer) --> Ejb(deployment-id=openejb/Deployer)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/Deployer) --> Ejb(deployment-id=openejb/Deployer)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=openejb/ConfigurationInfoBusinessRemote) --> Ejb(deployment-id=openejb/ConfigurationInfo)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/ConfigurationInfo!org.apache.openejb.assembler.classic.cmd.ConfigurationInfo) --> Ejb(deployment-id=openejb/ConfigurationInfo)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/ConfigurationInfo) --> Ejb(deployment-id=openejb/ConfigurationInfo)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=MEJB) --> Ejb(deployment-id=MEJB)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/MEJB!javax.management.j2ee.ManagementHome) --> Ejb(deployment-id=MEJB)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/MEJB) --> Ejb(deployment-id=MEJB)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@1c9219a
+Feb 23, 2016 12:01:34 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:01:34 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:01:34 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:01:34 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:01:34 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 137 ms.
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=openejb/Deployer, ejb-name=openejb/Deployer, container=My Stateless Container)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=MEJB, ejb-name=MEJB, container=My Stateless Container)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=openejb/ConfigurationInfo, ejb-name=openejb/ConfigurationInfo, container=My Stateless Container)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=openejb/Deployer, ejb-name=openejb/Deployer, container=My Stateless Container)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=MEJB, ejb-name=MEJB, container=My Stateless Container)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=openejb/ConfigurationInfo, ejb-name=openejb/ConfigurationInfo, container=My Stateless Container)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler deployMBean
+INFO: Deployed MBean(openejb.user.mbeans:application=openejb,group=org.apache.openejb.assembler.monitoring,name=JMXDeployer)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=openejb)
+Feb 23, 2016 12:01:34 AM org.apache.openejb.server.ServiceManager initServer
+INFO: Creating ServerService(id=cxf)
+Feb 23, 2016 12:01:35 AM org.apache.openejb.server.ServiceManager initServer
+INFO: Creating ServerService(id=cxf-rs)
+Feb 23, 2016 12:01:35 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Starting service cxf
+Feb 23, 2016 12:01:35 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Started service cxf
+Feb 23, 2016 12:01:35 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Starting service cxf-rs
+Feb 23, 2016 12:01:35 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Started service cxf-rs
+Feb 23, 2016 12:01:35 AM org.apache.openejb.server.SimpleServiceManager start
+INFO:   ** Bound Services **
+Feb 23, 2016 12:01:35 AM org.apache.openejb.server.SimpleServiceManager printRow
+INFO:   NAME                 IP              PORT  
+Feb 23, 2016 12:01:35 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: -------
+Feb 23, 2016 12:01:35 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Ready!
+Feb 23, 2016 12:01:35 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 6028 ms
+Feb 23, 2016 12:01:35 AM org.apache.tomee.catalina.OpenEJBNamingContextListener bindResource
+INFO: Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+Feb 23, 2016 12:01:35 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Resource(id=UserDatabase)
+Feb 23, 2016 12:01:35 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Feb 23, 2016 12:01:35 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.30
+Feb 23, 2016 12:01:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs
+Feb 23, 2016 12:01:35 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /docs
+Feb 23, 2016 12:01:35 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs
+Feb 23, 2016 12:01:35 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs" loaded.
+Feb 23, 2016 12:01:35 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs
+Feb 23, 2016 12:01:35 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@1c9219a
+Feb 23, 2016 12:01:35 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:01:35 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:01:35 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:01:35 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:01:35 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 21 ms.
+Feb 23, 2016 12:01:35 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs)
+Feb 23, 2016 12:01:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager
+Feb 23, 2016 12:01:35 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /host-manager
+Feb 23, 2016 12:01:36 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager
+Feb 23, 2016 12:01:36 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager" loaded.
+Feb 23, 2016 12:01:36 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@1c9219a
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:01:36 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:01:36 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 23 ms.
+Feb 23, 2016 12:01:36 AM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
+INFO: using context file C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager\META-INF\context.xml
+Feb 23, 2016 12:01:36 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager)
+Feb 23, 2016 12:01:36 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager
+Feb 23, 2016 12:01:36 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /manager
+Feb 23, 2016 12:01:36 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager
+Feb 23, 2016 12:01:36 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager" loaded.
+Feb 23, 2016 12:01:36 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@1c9219a
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:01:36 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:01:36 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 16 ms.
+Feb 23, 2016 12:01:36 AM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
+INFO: using context file C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager\META-INF\context.xml
+Feb 23, 2016 12:01:36 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager)
+Feb 23, 2016 12:01:36 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT
+Feb 23, 2016 12:01:36 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init 
+Feb 23, 2016 12:01:36 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT
+Feb 23, 2016 12:01:36 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT" loaded.
+Feb 23, 2016 12:01:36 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@1c9219a
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:01:36 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:01:36 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:01:36 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 15 ms.
+Feb 23, 2016 12:01:36 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT)
+Feb 23, 2016 12:01:36 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee
+Feb 23, 2016 12:01:36 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /tomee
+Feb 23, 2016 12:01:37 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee
+Feb 23, 2016 12:01:37 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee" loaded.
+Feb 23, 2016 12:01:37 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee
+Feb 23, 2016 12:01:37 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@1c9219a
+Feb 23, 2016 12:01:37 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:01:37 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:01:37 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:01:37 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:01:37 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 17 ms.
+Feb 23, 2016 12:01:37 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee)
+Feb 23, 2016 12:01:37 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:01:37 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /Vezbe09
+Feb 23, 2016 12:01:37 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.deployments.classpath.filter.systemapps=false'
+Feb 23, 2016 12:01:37 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.default.deployment-module=org.apache.openejb.config.WebModule'
+Feb 23, 2016 12:01:37 AM org.apache.openejb.config.DeploymentLoader discoverModuleType
+INFO: type for '/c:/users/ivan/desktop/isaprojekat/isa/apache-tomee-plus-1.5.0/lib' was not found, defaulting to WebModule
+Feb 23, 2016 12:01:37 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.default.deployment-module=org.apache.openejb.config.WebModule'
+Feb 23, 2016 12:01:37 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb ManagerDaoBean: EjbDeployment(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb JelovnikDaoBean: EjbDeployment(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb GostDaoBean: EjbDeployment(deployment-id=GostDaoBean)
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb RestoranDaoBean: EjbDeployment(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb JeloDaoBean: EjbDeployment(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb AdminDaoBean: EjbDeployment(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb InitBean: EjbDeployment(deployment-id=InitBean)
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.AutoConfig deploy
+INFO: Configuring PersistenceUnit(name=Vezbe09, provider=org.apache.openjpa.persistence.PersistenceProviderImpl)
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.AutoConfig setJtaDataSource
+INFO: Adjusting PersistenceUnit Vezbe09 <jta-data-source> to Resource ID 'My DataSource' from 'null'
+Feb 23, 2016 12:01:38 AM org.apache.openejb.config.AutoConfig setNonJtaDataSource
+INFO: Adjusting PersistenceUnit Vezbe09 <non-jta-data-source> to Resource ID 'My Unmanaged DataSource' from 'null'
+Feb 23, 2016 12:01:39 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09" loaded.
+Feb 23, 2016 12:01:39 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:01:39 AM org.apache.openejb.assembler.classic.PersistenceBuilder createEntityManagerFactory
+INFO: PersistenceUnit(name=Vezbe09, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 592ms
+Feb 23, 2016 12:01:39 AM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeploying app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:01:39 AM org.apache.catalina.core.ContainerBase removeChild
+SEVERE: ContainerBase.removeChild: destroy: 
+org.apache.catalina.LifecycleException: An invalid Lifecycle transition was attempted ([before_destroy]) for component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Vezbe09]] in state [STARTING_PREP]
+	at org.apache.catalina.util.LifecycleBase.invalidTransition(LifecycleBase.java:408)
+	at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:298)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:1041)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.undeploy(TomcatWebAppBuilder.java:977)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.undeploy(TomcatWebAppBuilder.java:956)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.undeployWebApps(TomcatWebAppBuilder.java:520)
+	at org.apache.openejb.assembler.classic.Assembler.destroyApplication(Assembler.java:1239)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:936)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:532)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:793)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.configureStart(TomcatWebAppBuilder.java:746)
+	at org.apache.tomee.catalina.GlobalListenerSupport.lifecycleEvent(GlobalListenerSupport.java:118)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5173)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:618)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1100)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1618)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+Feb 23, 2016 12:01:40 AM org.apache.tomee.catalina.TomcatWebAppBuilder startInternal
+SEVERE: Unable to deploy collapsed ear in war StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Vezbe09]
+org.apache.openejb.OpenEJBException: Creating application failed: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09: Error building bean 'ManagerDaoBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:940)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:532)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:793)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.configureStart(TomcatWebAppBuilder.java:746)
+	at org.apache.tomee.catalina.GlobalListenerSupport.lifecycleEvent(GlobalListenerSupport.java:118)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5173)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:618)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1100)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1618)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.openejb.OpenEJBException: Error building bean 'ManagerDaoBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.EjbJarBuilder.build(EjbJarBuilder.java:81)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:700)
+	... 18 more
+Caused by: org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.load(EnterpriseBeanBuilder.java:428)
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.loadClass(EnterpriseBeanBuilder.java:405)
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.build(EnterpriseBeanBuilder.java:81)
+	at org.apache.openejb.assembler.classic.EjbJarBuilder.build(EjbJarBuilder.java:66)
+	... 19 more
+
+Feb 23, 2016 12:01:40 AM org.apache.catalina.core.ContainerBase addChildInternal
+SEVERE: ContainerBase.addChild: start: 
+org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Vezbe09]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:618)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1100)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1618)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.tomee.catalina.TomEERuntimeException: org.apache.openejb.OpenEJBException: Creating application failed: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09: Error building bean 'ManagerDaoBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:800)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.configureStart(TomcatWebAppBuilder.java:746)
+	at org.apache.tomee.catalina.GlobalListenerSupport.lifecycleEvent(GlobalListenerSupport.java:118)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5173)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: org.apache.openejb.OpenEJBException: Creating application failed: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09: Error building bean 'ManagerDaoBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:940)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:532)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:793)
+	... 16 more
+Caused by: org.apache.openejb.OpenEJBException: Error building bean 'ManagerDaoBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.EjbJarBuilder.build(EjbJarBuilder.java:81)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:700)
+	... 18 more
+Caused by: org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean for bean ManagerDaoBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.load(EnterpriseBeanBuilder.java:428)
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.loadClass(EnterpriseBeanBuilder.java:405)
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.build(EnterpriseBeanBuilder.java:81)
+	at org.apache.openejb.assembler.classic.EjbJarBuilder.build(EjbJarBuilder.java:66)
+	... 19 more
+
+Feb 23, 2016 12:01:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+SEVERE: Error deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Vezbe09]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:904)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:618)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1100)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1618)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+Feb 23, 2016 12:01:41 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Feb 23, 2016 12:01:41 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Feb 23, 2016 12:01:41 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 6147 ms
+Feb 23, 2016 12:01:51 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.deployments.classpath.filter.systemapps=false'
+Feb 23, 2016 12:01:51 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.default.deployment-module=org.apache.openejb.config.WebModule'
+Feb 23, 2016 12:01:51 AM org.apache.openejb.config.DeploymentLoader discoverModuleType
+INFO: type for '/c:/users/ivan/desktop/isaprojekat/isa/apache-tomee-plus-1.5.0/lib' was not found, defaulting to WebModule
+Feb 23, 2016 12:01:51 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.default.deployment-module=org.apache.openejb.config.WebModule'
+Feb 23, 2016 12:01:51 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb InitBean: EjbDeployment(deployment-id=InitBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb JeloDaoBean: EjbDeployment(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb RestoranDaoBean: EjbDeployment(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb GostDaoBean: EjbDeployment(deployment-id=GostDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb JelovnikDaoBean: EjbDeployment(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb AdminDaoBean: EjbDeployment(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb ManagerDaoBean: EjbDeployment(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.AutoConfig deploy
+INFO: Configuring PersistenceUnit(name=Vezbe09, provider=org.apache.openjpa.persistence.PersistenceProviderImpl)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.AutoConfig setJtaDataSource
+INFO: Adjusting PersistenceUnit Vezbe09 <jta-data-source> to Resource ID 'My DataSource' from 'null'
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.AutoConfig setNonJtaDataSource
+INFO: Adjusting PersistenceUnit Vezbe09 <non-jta-data-source> to Resource ID 'My Unmanaged DataSource' from 'null'
+Feb 23, 2016 12:01:52 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09" loaded.
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.PersistenceBuilder createEntityManagerFactory
+INFO: PersistenceUnit(name=Vezbe09, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 14ms
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=InitBeanRemote) --> Ejb(deployment-id=InitBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/InitBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.Init) --> Ejb(deployment-id=InitBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/InitBean) --> Ejb(deployment-id=InitBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=JeloDaoBeanLocal) --> Ejb(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/JeloDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.JeloDaoLocal) --> Ejb(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/JeloDaoBean) --> Ejb(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=RestoranDaoBeanLocal) --> Ejb(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/RestoranDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDaoLocal) --> Ejb(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/RestoranDaoBean) --> Ejb(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=GostDaoBeanLocal) --> Ejb(deployment-id=GostDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/GostDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.GostDaoLocal) --> Ejb(deployment-id=GostDaoBean)
+Feb 23, 2016 12:01:52 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/GostDaoBean) --> Ejb(deployment-id=GostDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=JelovnikDaoBeanLocal) --> Ejb(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/JelovnikDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.JelovnikDaoLocal) --> Ejb(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/JelovnikDaoBean) --> Ejb(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=AdminDaoBeanLocal) --> Ejb(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/AdminDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.AdminDaoLocal) --> Ejb(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/AdminDaoBean) --> Ejb(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=ManagerDaoBeanLocal) --> Ejb(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/ManagerDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoLocal) --> Ejb(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/ManagerDaoBean) --> Ejb(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@1c9219a
+Feb 23, 2016 12:01:53 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:01:53 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:01:53 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:01:53 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:01:53 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 35 ms.
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=InitBean, ejb-name=InitBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=AdminDaoBean, ejb-name=AdminDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=JeloDaoBean, ejb-name=JeloDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=GostDaoBean, ejb-name=GostDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=RestoranDaoBean, ejb-name=RestoranDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=JelovnikDaoBean, ejb-name=JelovnikDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=ManagerDaoBean, ejb-name=ManagerDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=InitBean, ejb-name=InitBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=AdminDaoBean, ejb-name=AdminDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=JeloDaoBean, ejb-name=JeloDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=GostDaoBean, ejb-name=GostDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=RestoranDaoBean, ejb-name=RestoranDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=JelovnikDaoBean, ejb-name=JelovnikDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=ManagerDaoBean, ejb-name=ManagerDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:01:53 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /Vezbe09
+Feb 23, 2016 12:01:53 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@1c9219a
+Feb 23, 2016 12:01:53 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:01:53 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:01:53 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:01:53 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:01:53 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 23 ms.
+Feb 23, 2016 12:01:54 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09)
+Feb 23, 2016 12:04:46 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Feb 23, 2016 12:04:46 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Feb 23, 2016 12:04:47 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Feb 23, 2016 12:04:47 AM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeploying app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT
+Feb 23, 2016 12:06:27 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jdk1.7.0_79\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;.
+Feb 23, 2016 12:06:29 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Feb 23, 2016 12:06:29 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Feb 23, 2016 12:06:31 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: ********************************************************************************
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: OpenEJB http://openejb.apache.org/
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Startup: Tue Feb 23 00:06:31 CET 2016
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Copyright 1999-2012 (C) Apache OpenEJB Project, All Rights Reserved.
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Version: 4.5.0
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Build date: 20120928
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Build time: 08:12
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: ********************************************************************************
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: openejb.home = C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0
+Feb 23, 2016 12:06:31 AM org.apache.openejb.OpenEJB$Instance <init>
+INFO: openejb.base = C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0
+Feb 23, 2016 12:06:31 AM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFO: Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@182a699
+Feb 23, 2016 12:06:31 AM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFO: Succeeded in installing singleton service
+Feb 23, 2016 12:06:31 AM org.apache.openejb.config.ConfigurationFactory init
+INFO: openejb configuration file is 'C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\conf\tomee.xml'
+Feb 23, 2016 12:06:32 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.provider.default=org.apache.tomee'
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My Unmanaged DataSource, type=Resource, provider-id=Default JDBC Database)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My DataSource, type=Resource, provider-id=Default JDBC Database)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My Singleton Container, type=Container, provider-id=Default Singleton Container)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My Stateful Container, type=Container, provider-id=Default Stateful Container)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=My Stateless Container, type=Container, provider-id=Default Stateless Container)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.system.apps=true'
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: null
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Using openejb.deploymentId.format '{ejbName}'
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb openejb/Deployer: EjbDeployment(deployment-id=openejb/Deployer)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb openejb/ConfigurationInfo: EjbDeployment(deployment-id=openejb/ConfigurationInfo)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb MEJB: EjbDeployment(deployment-id=MEJB)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "openejb" loaded.
+Feb 23, 2016 12:06:32 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating TransactionManager(id=Default Transaction Manager)
+Feb 23, 2016 12:06:32 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating SecurityService(id=Tomcat Security Service)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Resource(id=My Unmanaged DataSource)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Resource(id=My DataSource)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Container(id=My Singleton Container)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Container(id=My Stateful Container)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.core.stateful.SimplePassivater init
+INFO: Using directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\temp for stateful session passivation
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Container(id=My Stateless Container)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: openejb
+Feb 23, 2016 12:06:33 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.jndiname.format={deploymentId}{interfaceType.openejbLegacyName}'
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=openejb/DeployerBusinessRemote) --> Ejb(deployment-id=openejb/Deployer)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/Deployer!org.apache.openejb.assembler.Deployer) --> Ejb(deployment-id=openejb/Deployer)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/Deployer) --> Ejb(deployment-id=openejb/Deployer)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=openejb/ConfigurationInfoBusinessRemote) --> Ejb(deployment-id=openejb/ConfigurationInfo)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/ConfigurationInfo!org.apache.openejb.assembler.classic.cmd.ConfigurationInfo) --> Ejb(deployment-id=openejb/ConfigurationInfo)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/openejb/ConfigurationInfo) --> Ejb(deployment-id=openejb/ConfigurationInfo)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=MEJB) --> Ejb(deployment-id=MEJB)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/MEJB!javax.management.j2ee.ManagementHome) --> Ejb(deployment-id=MEJB)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/openejb/MEJB) --> Ejb(deployment-id=MEJB)
+Feb 23, 2016 12:06:33 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@182a699
+Feb 23, 2016 12:06:34 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:06:34 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:06:34 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:06:34 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:06:34 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 170 ms.
+Feb 23, 2016 12:06:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=openejb/Deployer, ejb-name=openejb/Deployer, container=My Stateless Container)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=MEJB, ejb-name=MEJB, container=My Stateless Container)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=openejb/ConfigurationInfo, ejb-name=openejb/ConfigurationInfo, container=My Stateless Container)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=openejb/Deployer, ejb-name=openejb/Deployer, container=My Stateless Container)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=MEJB, ejb-name=MEJB, container=My Stateless Container)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=openejb/ConfigurationInfo, ejb-name=openejb/ConfigurationInfo, container=My Stateless Container)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.assembler.classic.Assembler deployMBean
+INFO: Deployed MBean(openejb.user.mbeans:application=openejb,group=org.apache.openejb.assembler.monitoring,name=JMXDeployer)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=openejb)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.ServiceManager initServer
+INFO: Creating ServerService(id=cxf)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.ServiceManager initServer
+INFO: Creating ServerService(id=cxf-rs)
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Starting service cxf
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Started service cxf
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Starting service cxf-rs
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Started service cxf-rs
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.SimpleServiceManager start
+INFO:   ** Bound Services **
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.SimpleServiceManager printRow
+INFO:   NAME                 IP              PORT  
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: -------
+Feb 23, 2016 12:06:34 AM org.apache.openejb.server.SimpleServiceManager start
+INFO: Ready!
+Feb 23, 2016 12:06:34 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 8410 ms
+Feb 23, 2016 12:06:35 AM org.apache.tomee.catalina.OpenEJBNamingContextListener bindResource
+INFO: Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+Feb 23, 2016 12:06:35 AM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Resource(id=UserDatabase)
+Feb 23, 2016 12:06:35 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Feb 23, 2016 12:06:35 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.30
+Feb 23, 2016 12:06:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs
+Feb 23, 2016 12:06:35 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /docs
+Feb 23, 2016 12:06:35 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs
+Feb 23, 2016 12:06:35 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs" loaded.
+Feb 23, 2016 12:06:35 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs
+Feb 23, 2016 12:06:35 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@182a699
+Feb 23, 2016 12:06:35 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:06:35 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:06:35 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:06:35 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:06:35 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 31 ms.
+Feb 23, 2016 12:06:35 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\docs)
+Feb 23, 2016 12:06:36 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager
+Feb 23, 2016 12:06:36 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /host-manager
+Feb 23, 2016 12:06:36 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager
+Feb 23, 2016 12:06:36 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager" loaded.
+Feb 23, 2016 12:06:36 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager
+Feb 23, 2016 12:06:36 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@182a699
+Feb 23, 2016 12:06:36 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:06:36 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:06:36 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:06:36 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:06:36 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 58 ms.
+Feb 23, 2016 12:06:36 AM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
+INFO: using context file C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager\META-INF\context.xml
+Feb 23, 2016 12:06:36 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\host-manager)
+Feb 23, 2016 12:06:37 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager
+Feb 23, 2016 12:06:37 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /manager
+Feb 23, 2016 12:06:37 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager
+Feb 23, 2016 12:06:37 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager" loaded.
+Feb 23, 2016 12:06:37 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager
+Feb 23, 2016 12:06:37 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@182a699
+Feb 23, 2016 12:06:37 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:06:37 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:06:37 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:06:37 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:06:37 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 28 ms.
+Feb 23, 2016 12:06:37 AM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
+INFO: using context file C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager\META-INF\context.xml
+Feb 23, 2016 12:06:37 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\manager)
+Feb 23, 2016 12:06:37 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT
+Feb 23, 2016 12:06:37 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init 
+Feb 23, 2016 12:06:37 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT
+Feb 23, 2016 12:06:37 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT" loaded.
+Feb 23, 2016 12:06:37 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT
+Feb 23, 2016 12:06:37 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@182a699
+Feb 23, 2016 12:06:37 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:06:37 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:06:37 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:06:37 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:06:37 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 18 ms.
+Feb 23, 2016 12:06:37 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\ROOT)
+Feb 23, 2016 12:06:38 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee
+Feb 23, 2016 12:06:38 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /tomee
+Feb 23, 2016 12:06:38 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee
+Feb 23, 2016 12:06:38 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee" loaded.
+Feb 23, 2016 12:06:38 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee
+Feb 23, 2016 12:06:38 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@182a699
+Feb 23, 2016 12:06:38 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:06:38 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:06:38 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:06:38 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:06:38 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 95 ms.
+Feb 23, 2016 12:06:38 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\tomee)
+Feb 23, 2016 12:06:38 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:06:38 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /Vezbe09
+Feb 23, 2016 12:06:39 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.deployments.classpath.filter.systemapps=false'
+Feb 23, 2016 12:06:39 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.default.deployment-module=org.apache.openejb.config.WebModule'
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.DeploymentLoader discoverModuleType
+INFO: type for '/c:/users/ivan/desktop/isaprojekat/isa/apache-tomee-plus-1.5.0/lib' was not found, defaulting to WebModule
+Feb 23, 2016 12:06:39 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.default.deployment-module=org.apache.openejb.config.WebModule'
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb InitBean: EjbDeployment(deployment-id=InitBean)
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb JeloDaoBean: EjbDeployment(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb JelovnikDaoBean: EjbDeployment(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb RestoranDaoBean: EjbDeployment(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb AdminDaoBean: EjbDeployment(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb ManagerDaoBean: EjbDeployment(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb GostDaoBean: EjbDeployment(deployment-id=GostDaoBean)
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.AutoConfig deploy
+INFO: Configuring PersistenceUnit(name=Vezbe09, provider=org.apache.openjpa.persistence.PersistenceProviderImpl)
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.AutoConfig setJtaDataSource
+INFO: Adjusting PersistenceUnit Vezbe09 <jta-data-source> to Resource ID 'My DataSource' from 'null'
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.AutoConfig setNonJtaDataSource
+INFO: Adjusting PersistenceUnit Vezbe09 <non-jta-data-source> to Resource ID 'My Unmanaged DataSource' from 'null'
+Feb 23, 2016 12:06:39 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09" loaded.
+Feb 23, 2016 12:06:39 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:06:40 AM org.apache.openejb.assembler.classic.PersistenceBuilder createEntityManagerFactory
+INFO: PersistenceUnit(name=Vezbe09, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 448ms
+Feb 23, 2016 12:06:40 AM org.apache.openejb.assembler.classic.Assembler destroyApplication
+INFO: Undeploying app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:06:40 AM org.apache.catalina.core.ContainerBase removeChild
+SEVERE: ContainerBase.removeChild: destroy: 
+org.apache.catalina.LifecycleException: An invalid Lifecycle transition was attempted ([before_destroy]) for component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Vezbe09]] in state [STARTING_PREP]
+	at org.apache.catalina.util.LifecycleBase.invalidTransition(LifecycleBase.java:408)
+	at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:298)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:1041)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.undeploy(TomcatWebAppBuilder.java:977)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.undeploy(TomcatWebAppBuilder.java:956)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.undeployWebApps(TomcatWebAppBuilder.java:520)
+	at org.apache.openejb.assembler.classic.Assembler.destroyApplication(Assembler.java:1239)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:936)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:532)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:793)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.configureStart(TomcatWebAppBuilder.java:746)
+	at org.apache.tomee.catalina.GlobalListenerSupport.lifecycleEvent(GlobalListenerSupport.java:118)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5173)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:618)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1100)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1618)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+Feb 23, 2016 12:06:41 AM org.apache.tomee.catalina.TomcatWebAppBuilder startInternal
+SEVERE: Unable to deploy collapsed ear in war StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Vezbe09]
+org.apache.openejb.OpenEJBException: Creating application failed: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09: Error building bean 'InitBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:940)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:532)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:793)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.configureStart(TomcatWebAppBuilder.java:746)
+	at org.apache.tomee.catalina.GlobalListenerSupport.lifecycleEvent(GlobalListenerSupport.java:118)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5173)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:618)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1100)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1618)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.openejb.OpenEJBException: Error building bean 'InitBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.EjbJarBuilder.build(EjbJarBuilder.java:81)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:700)
+	... 18 more
+Caused by: org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.load(EnterpriseBeanBuilder.java:428)
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.loadClass(EnterpriseBeanBuilder.java:405)
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.build(EnterpriseBeanBuilder.java:81)
+	at org.apache.openejb.assembler.classic.EjbJarBuilder.build(EjbJarBuilder.java:66)
+	... 19 more
+
+Feb 23, 2016 12:06:41 AM org.apache.catalina.core.ContainerBase addChildInternal
+SEVERE: ContainerBase.addChild: start: 
+org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Vezbe09]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:618)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1100)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1618)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.tomee.catalina.TomEERuntimeException: org.apache.openejb.OpenEJBException: Creating application failed: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09: Error building bean 'InitBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:800)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.configureStart(TomcatWebAppBuilder.java:746)
+	at org.apache.tomee.catalina.GlobalListenerSupport.lifecycleEvent(GlobalListenerSupport.java:118)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5173)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: org.apache.openejb.OpenEJBException: Creating application failed: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09: Error building bean 'InitBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:940)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:532)
+	at org.apache.tomee.catalina.TomcatWebAppBuilder.startInternal(TomcatWebAppBuilder.java:793)
+	... 16 more
+Caused by: org.apache.openejb.OpenEJBException: Error building bean 'InitBean'.  Exception: class org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.EjbJarBuilder.build(EjbJarBuilder.java:81)
+	at org.apache.openejb.assembler.classic.Assembler.createApplication(Assembler.java:700)
+	... 18 more
+Caused by: org.apache.openejb.OpenEJBException: Error while loading bean class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean for bean InitBean. Received message: Cannot locate the class rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.InitBean from the codebase [C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09\Vezbe09.jar]
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.load(EnterpriseBeanBuilder.java:428)
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.loadClass(EnterpriseBeanBuilder.java:405)
+	at org.apache.openejb.assembler.classic.EnterpriseBeanBuilder.build(EnterpriseBeanBuilder.java:81)
+	at org.apache.openejb.assembler.classic.EjbJarBuilder.build(EjbJarBuilder.java:66)
+	... 19 more
+
+Feb 23, 2016 12:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+SEVERE: Error deploying web application directory C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Vezbe09]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:904)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:618)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1100)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1618)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+Feb 23, 2016 12:06:41 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Feb 23, 2016 12:06:41 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Feb 23, 2016 12:06:41 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 6740 ms
+Feb 23, 2016 12:06:51 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.deployments.classpath.filter.systemapps=false'
+Feb 23, 2016 12:06:51 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.default.deployment-module=org.apache.openejb.config.WebModule'
+Feb 23, 2016 12:06:51 AM org.apache.openejb.config.DeploymentLoader discoverModuleType
+INFO: type for '/c:/users/ivan/desktop/isaprojekat/isa/apache-tomee-plus-1.5.0/lib' was not found, defaulting to WebModule
+Feb 23, 2016 12:06:52 AM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.default.deployment-module=org.apache.openejb.config.WebModule'
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.ConfigurationFactory configureApplication
+INFO: Configuring enterprise application: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb RestoranDaoBean: EjbDeployment(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb JelovnikDaoBean: EjbDeployment(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb ManagerDaoBean: EjbDeployment(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb AdminDaoBean: EjbDeployment(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb InitBean: EjbDeployment(deployment-id=InitBean)
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb JeloDaoBean: EjbDeployment(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.InitEjbDeployments deploy
+INFO: Auto-deploying ejb GostDaoBean: EjbDeployment(deployment-id=GostDaoBean)
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.AutoConfig deploy
+INFO: Configuring PersistenceUnit(name=Vezbe09, provider=org.apache.openjpa.persistence.PersistenceProviderImpl)
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.AutoConfig setJtaDataSource
+INFO: Adjusting PersistenceUnit Vezbe09 <jta-data-source> to Resource ID 'My DataSource' from 'null'
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.AutoConfig setNonJtaDataSource
+INFO: Adjusting PersistenceUnit Vezbe09 <non-jta-data-source> to Resource ID 'My Unmanaged DataSource' from 'null'
+Feb 23, 2016 12:06:52 AM org.apache.openejb.config.AppInfoBuilder build
+INFO: Enterprise application "C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09" loaded.
+Feb 23, 2016 12:06:52 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Assembling app: C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09
+Feb 23, 2016 12:06:52 AM org.apache.openejb.assembler.classic.PersistenceBuilder createEntityManagerFactory
+INFO: PersistenceUnit(name=Vezbe09, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 17ms
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=RestoranDaoBeanLocal) --> Ejb(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/RestoranDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDaoLocal) --> Ejb(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/RestoranDaoBean) --> Ejb(deployment-id=RestoranDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=JelovnikDaoBeanLocal) --> Ejb(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/JelovnikDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.JelovnikDaoLocal) --> Ejb(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/JelovnikDaoBean) --> Ejb(deployment-id=JelovnikDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=ManagerDaoBeanLocal) --> Ejb(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/ManagerDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoLocal) --> Ejb(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/ManagerDaoBean) --> Ejb(deployment-id=ManagerDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=AdminDaoBeanLocal) --> Ejb(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/AdminDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.AdminDaoLocal) --> Ejb(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/AdminDaoBean) --> Ejb(deployment-id=AdminDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=InitBeanRemote) --> Ejb(deployment-id=InitBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/InitBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.Init) --> Ejb(deployment-id=InitBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/InitBean) --> Ejb(deployment-id=InitBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=JeloDaoBeanLocal) --> Ejb(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/JeloDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.JeloDaoLocal) --> Ejb(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/JeloDaoBean) --> Ejb(deployment-id=JeloDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=GostDaoBeanLocal) --> Ejb(deployment-id=GostDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/GostDaoBean!rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.GostDaoLocal) --> Ejb(deployment-id=GostDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.JndiBuilder bind
+INFO: Jndi(name=global/Vezbe09/Vezbe09.jar/GostDaoBean) --> Ejb(deployment-id=GostDaoBean)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@182a699
+Feb 23, 2016 12:06:53 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:06:53 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:06:53 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:06:53 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:06:53 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 35 ms.
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=InitBean, ejb-name=InitBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=AdminDaoBean, ejb-name=AdminDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=JeloDaoBean, ejb-name=JeloDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=GostDaoBean, ejb-name=GostDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=RestoranDaoBean, ejb-name=RestoranDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=JelovnikDaoBean, ejb-name=JelovnikDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Created Ejb(deployment-id=ManagerDaoBean, ejb-name=ManagerDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=InitBean, ejb-name=InitBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=AdminDaoBean, ejb-name=AdminDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=JeloDaoBean, ejb-name=JeloDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:53 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=GostDaoBean, ejb-name=GostDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:54 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=RestoranDaoBean, ejb-name=RestoranDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:54 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=JelovnikDaoBean, ejb-name=JelovnikDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:54 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Started Ejb(deployment-id=ManagerDaoBean, ejb-name=ManagerDaoBean, container=My Stateless Container)
+Feb 23, 2016 12:06:54 AM org.apache.tomee.catalina.TomcatWebAppBuilder init
+INFO: -------------------------
+TomcatWebAppBuilder.init /Vezbe09
+Feb 23, 2016 12:06:54 AM org.apache.openejb.cdi.CdiBuilder initSingleton
+INFO: Existing thread singleton service in SystemInstance() org.apache.openejb.cdi.ThreadSingletonServiceImpl@182a699
+Feb 23, 2016 12:06:54 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container is starting...
+Feb 23, 2016 12:06:54 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [CdiPlugin]
+Feb 23, 2016 12:06:54 AM org.apache.webbeans.plugins.PluginLoader startUp
+INFO: Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+Feb 23, 2016 12:06:54 AM org.apache.openejb.cdi.BeansDeployer validateInjectionPoints
+INFO: All injection points are validated successfully.
+Feb 23, 2016 12:06:54 AM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
+INFO: OpenWebBeans Container has started, it took 21 ms.
+Feb 23, 2016 12:06:54 AM org.apache.openejb.assembler.classic.Assembler createApplication
+INFO: Deployed Application(path=C:\Users\ivan\Desktop\ISAPROJEKAT\ISA\apache-tomee-plus-1.5.0\webapps\Vezbe09)

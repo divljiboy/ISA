@@ -1,4 +1,11 @@
 <%@page
+	import="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost"%>
+<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+%>
+<%@page
 	import="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
@@ -20,37 +27,53 @@
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="path/to/font-awesome/css/font-awesome.min.css">
+
+<script type="text/javascript">
+	function pr() {
+		var x = document.URL;
+		if (x === "http://localhost:8080/Vezbe09/prijatelji.jsp?Nijeuspelo") {
+			alert("Vec postoji u listi prijatelja!");
+		}
+	}
+</script>
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">
 	<c:redirect url="./start.jsp" />
 </c:if>
 
-<body>
+<body onload="pr()">
 	<div id="wrapper">
 
 
 
 		<c:if test="${sessionScope.admin!=null}">
+			<jsp:useBean id="korisniciSistema"
+				type="java.util.List<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost>"
+				scope="session" />
 			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i
+						class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="prijatelji.jsp"><i class="fa fa-users"></i>
+				<li><a href="./InitKorisniciController"><i
+						class="fa fa-users"></i>
 						<div>
 							<fmt:message key="korisnici" />
 						</div></a></li>
-				<li><a href="menadzeri.jsp.jsp"><i class="fa fa-user"></i>
+				<li><a href="./InitMenadzerController"><i
+						class="fa fa-user"></i>
 						<div>
 							<fmt:message key="menadzeri" />
 						</div></a></li>
-				<li><a href="jelovnici.jsp"><i class="fa fa-glass"></i>
+				<li><a href="InitJelovniciController"><i
+						class="fa fa-glass"></i>
 						<div>
 							<fmt:message key="jelovnici" />
 						</div></a></li>
 
-				<li><a href="jela.jsp"><i class="fa fa-lemon-o"></i>
+				<li><a href="InitJelaController"><i class="fa fa-lemon-o"></i>
 						<div>
 							<fmt:message key="jela" />
 						</div></a></li>
@@ -68,7 +91,32 @@
 							<fmt:message key="odjava" />
 						</div> </a></li>
 			</ul>
+
+			<form>
+				<table>
+					<thead>
+						<tr>
+							<th>Ime</th>
+							<th>Prezime</th>
+							<th>Korisnicko ime</th>
+							<th>Lozinka</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${korisniciSistema}" var="korisnik">
+							<tr>
+								<td>${korisnik.firstName}</td>
+								<td>${korisnik.lastName}</td>
+								<td>${korisnik.username}</td>
+								<td>${korisnik.password}</td>
+							</tr>
+
+						</c:forEach>
+					</tbody>
+				</table>
+			</form>
 		</c:if>
+
 
 
 		<c:if test="${sessionScope.gost!=null}">
@@ -106,18 +154,40 @@
 					<th>Ime</th>
 					<th>Prezime</th>
 					<th>&nbsp;</th>
-					<th>&nbsp;</th>
+					
 				</tr>
 
-				<c:forEach items="${gosti}" var="prijatelj">
+				<c:forEach items="${prijatelji}" var="prijatelj">
 					<tr>
 						<td>${prijatelj.firstName}</td>
 						<td>${prijatelj.lastName}</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
+						<td><a href="./IzbrisiPrijatelja?id=${prijatelj.id}">Izbrisi</a></td>
 					</tr>
 				</c:forEach>
 			</table>
+
+			<form>
+				<table>
+					<thead>
+						<tr>
+							<th>Ime</th>
+							<th>Prezime</th>
+
+
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${nisuprijatelji}" var="korisnik">
+							<tr>
+								<td>${korisnik.firstName}</td>
+								<td>${korisnik.lastName}</td>
+								<td><a href="./DodajPrijatelja?id=${korisnik.id}">Dodaj</a></td>
+							</tr>
+
+						</c:forEach>
+					</tbody>
+				</table>
+			</form>
 
 
 		</c:if>
