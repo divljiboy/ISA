@@ -1,8 +1,7 @@
 package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Set;
+import java.util.HashSet;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -12,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost;
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Prijateljstvo;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.GostDaoLocal;
 
 /**
@@ -27,22 +27,24 @@ public class PrijateljiController extends HttpServlet {
 	@EJB
 	GostDaoLocal gostDao;
 
-	protected void doGet(javax.servlet.http.HttpServletRequest req, javax.servlet.http.HttpServletResponse resp)
+	protected void doGet(javax.servlet.http.HttpServletRequest req,
+			javax.servlet.http.HttpServletResponse resp)
 			throws javax.servlet.ServletException, java.io.IOException {
 
 		HttpSession session = req.getSession();
-		Gost g = (Gost) session.getAttribute("gost");
-
-		Set<Gost> p = (Set<Gost>) gostDao.findPrijatelji(g);
-
-		req.setAttribute("prijatelji", p);
-		session.setAttribute("nisuprijatelji", gostDao.findAllKojiMuNisuPrijatelji(g));
-		getServletContext().getRequestDispatcher("/prijatelji.jsp").forward(req, resp);
-
+		if (session.getAttribute("gost") != null) {
+			Gost gost = (Gost) session.getAttribute("gost");
+			HashSet<Prijateljstvo> prijateji = gostDao.findPrijatelje(gost);
+			session.setAttribute("prijatelji", prijateji);
+			getServletContext().getRequestDispatcher("/prijatelji.jsp")
+					.forward(req, resp);
+		}
+		
 	};
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		super.doPost(req, resp);
 	}

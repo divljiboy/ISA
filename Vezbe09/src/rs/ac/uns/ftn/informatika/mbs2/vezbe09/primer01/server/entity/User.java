@@ -13,7 +13,9 @@ import javax.persistence.MappedSuperclass;
  *
  */
 @MappedSuperclass
-public abstract class User  implements Serializable{
+public abstract class User implements Serializable{
+
+	private static final long serialVersionUID = -7773702648697201146L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

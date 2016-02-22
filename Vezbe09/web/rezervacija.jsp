@@ -1,8 +1,9 @@
+
 <%
 	response.setHeader("Cache-Control",
 			"no-cache, no-store, must-revalidate");
 	response.setHeader("Pragma", "no-cache");
-	response.setDateHeader("Expires",0);
+	response.setDateHeader("Expires", 0);
 %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
@@ -104,10 +105,35 @@
 
 			<form action="">
 				<table>
-					<td>Restoran :</td>
-					<td><input type="text" value="${restoranRezervacija.naziv}"
-						required></td>
+					<tbody>
+						<tr>
+							<td>Restoran :</td>
+							<td><input type="text" value="${restoranRezervacija.naziv}"
+								readonly="readonly"></td>
+						</tr>
+						<tr>
+							<td>Datum i vreme:</td>
+							<td><input type="datetime" name="datumIVreme"></td>
+						</tr>
+						<tr>
+							<td>Trajanje:</td>
+							<td><input type="number"></td>
+						</tr>
+						<tr>
+							<td>Izaberi Sto</td>
+							<td><a href="#">Konfiguracija restorana</a></td>
+						</tr>
 
+						<tr>
+							<td>Pozovi prijatelje:</td>
+							<td><a href="#">Pozovi prijatelje</a></td>
+						</tr>
+
+						<tr>
+							<td colspan="2"><button type="submit">Kreiraj
+									Rezervaciju</button></td>
+						</tr>
+					</tbody>
 				</table>
 
 

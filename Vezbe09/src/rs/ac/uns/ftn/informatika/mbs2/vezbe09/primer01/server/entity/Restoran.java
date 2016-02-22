@@ -29,8 +29,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "restoran")
-@NamedQuery(name = "findMeniuRestoranu", query = "SELECT jelovnik_id from ra_32_2011.restoran_jelovnik r WHERE r.restoran_id like 3")
+@NamedQuery(name="findMeniuRestoranu" , query = "SELECT jelovnik_id from ra_32_2011.restoran_jelovnik r WHERE r.restoran_id like 3")
 public class Restoran implements Serializable{
+
+	private static final long serialVersionUID = -384592856314428303L;
 
 	public Restoran() {
 	}
@@ -46,32 +48,25 @@ public class Restoran implements Serializable{
 	@Column(name = "restoran_id", unique = true, nullable = false)
 	private int id;
 
-	@Column(name = "restoran_naziv", unique = true, nullable = false)
+	@Column(name = "restoran_naziv", unique = false, nullable = false)
 	private String naziv;
 
 	@Column(name = "restoran_opis", unique = false, nullable = true)
 	private String opis;
 
-	@Column(name = "broj_stolova", unique = false, nullable = true)
-	private int broj_stolova;
 
 	@OneToMany(cascade = { ALL }, fetch = LAZY, mappedBy = "restoran")
 	private Set<Sto> stolovi = new HashSet<Sto>();
 
 	@OneToMany(cascade = { ALL }, fetch = LAZY, mappedBy = "restoran")
 	private Set<Manager> menadzeri = new HashSet<Manager>();
-
-	public Set<Manager> getMenadzeri() {
-		return menadzeri;
-	}
-
-	public void setMenadzeri(Set<Manager> menadzeri) {
-		this.menadzeri = menadzeri;
-	}
+	
+	@OneToMany(cascade = { ALL }, fetch = LAZY, mappedBy = "restoran")
+	private Set<Rezervcija>  rezervacije = new HashSet<Rezervcija>();
 
 	@ManyToMany
 	@JoinTable(name = "restoran_jelovnik", joinColumns = @JoinColumn(name = "restoran_id", referencedColumnName = "restoran_id"), inverseJoinColumns = @JoinColumn(name = "jelovnik_id", referencedColumnName = "jelovnik_id"))
-	private Set<Jelovnik> jelovnik;
+	private Set<Jelovnik> jelovnik = new HashSet<Jelovnik>();
 
 	public int getId() {
 		return id;
@@ -97,14 +92,33 @@ public class Restoran implements Serializable{
 		this.opis = opis;
 	}
 
-	public int getBroj_stolova() {
-		return broj_stolova;
+
+	public void setSto(HashSet<Sto> stolovi) {
+		this.stolovi = stolovi;
 	}
 
-	public void setBroj_stolova(int broj_stolova) {
-		this.broj_stolova = broj_stolova;
-	}
 
+
+	public void setMenadzer(HashSet<Manager> menadzeri) {
+		this.menadzeri = menadzeri;
+	}
+	
+	
+
+//	public Collection<Sto> getStolovi(){
+//		if(stolovi == null)
+//			stolovi = new HashSet<Sto>();
+//		return stolovi;
+//	}
+	
+	
+	//public Collection<Jelovnik> getJelovnici(){
+	//	if(this.jelovnik == null){
+	//		this.jelovnik = new HashSet<Jelovnik>();
+	//	}
+	//	return this.jelovnik;
+	//}
+	
 	public Set<Sto> getStolovi() {
 		return stolovi;
 	}
@@ -113,29 +127,116 @@ public class Restoran implements Serializable{
 		this.stolovi = stolovi;
 	}
 
-	public Set<Jelovnik> getJelovnik() {
-		return jelovnik;
+	public HashSet<Jelovnik> getJelovnik() {
+		return (HashSet<Jelovnik>) jelovnik;
 	}
 
-	public void setJelovnik(Set<Jelovnik> jelovnik) {
+	public void setJelovnik(HashSet<Jelovnik> jelovnik) {
 		this.jelovnik = jelovnik;
 	}
-	public void dodajJelovnik(Jelovnik j)
-	{
-		if(!jelovnik.contains(j))
-		{
-			jelovnik.add(j);
+	public Collection<Manager> getMenadzeri(){
+		if(menadzeri == null){
+			menadzeri = new HashSet<Manager>();
 		}
-		
+		return menadzeri;
 	}
-	public void izbrisiJelovnik(Jelovnik j)
-	{
-		if(jelovnik.contains(j))
-		{
-			jelovnik.remove(j);
-		}
-		
-	}
-
 	
+	
+	public Iterator<Sto> getIteratorSto(){
+		if(stolovi == null){
+			stolovi = new HashSet<Sto>();
+		}
+		return stolovi.iterator();
+	}
+	
+	public Iterator<Jelovnik> getIteratorJelovnik(){
+		if(jelovnik == null){
+			jelovnik = new HashSet<Jelovnik>();
+		}
+		return jelovnik.iterator();
+	}
+	
+	
+	public Iterator<Manager> getIteratorMenadzer(){
+		if(menadzeri == null){
+			menadzeri = new HashSet<Manager>();
+		}
+		return menadzeri.iterator();
+	}
+	
+	
+	
+	public void addSto(Sto sto){
+		if(sto == null)
+			return;
+		if(stolovi == null)
+			stolovi = new HashSet<Sto>();
+		if(!stolovi.contains(sto))
+			stolovi.add(sto);
+	}
+	
+	
+	public void addJelovnik(Jelovnik jelovnik){
+		if(jelovnik == null)
+			return;
+		if(this.jelovnik == null)
+			this.jelovnik = new HashSet<Jelovnik>();
+		if(!this.jelovnik.contains(jelovnik)){
+			this.jelovnik.add(jelovnik);
+		}
+	}
+	
+	public void addMenadzer(Manager menadzer){
+		if(menadzer ==null)
+			return;
+		if(menadzeri == null)
+			menadzeri = new HashSet<Manager>();
+		if(!menadzeri.contains(menadzer))
+				menadzeri.add(menadzer);
+	}
+	
+	public void removeSto(Sto sto){
+		if(sto == null)
+			return;
+		if(stolovi != null)
+			if(stolovi.contains(sto))
+				stolovi.remove(sto);
+			
+	}
+	
+	public void removeJelovnik(Jelovnik jelovnik){
+		if(jelovnik ==null)
+			return;
+		if(this.jelovnik!=null)
+			if(this.jelovnik.contains(jelovnik))
+				this.jelovnik.remove(jelovnik);
+	}
+	
+	public void removeMenadzer(Manager menadzer){
+		if(menadzer == null)
+			return;
+		if(menadzeri!=null)
+			if(menadzeri.contains(menadzer))
+				menadzeri.remove(menadzer);
+	}
+	
+	
+	public void removeAllStolovi(){
+		if(stolovi!=null)
+			stolovi.clear();
+	}
+	
+	public void removeAllJelovnici(){
+		if(jelovnik!=null)
+			jelovnik.clear();
+	}
+	
+	public void removeAllMenadzeri(){
+		if(menadzeri!=null)
+			menadzeri.clear();
+	}
+	
+	
+	
+
 }

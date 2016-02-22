@@ -32,7 +32,7 @@ public class RezervacijaController extends HttpServlet {
 		
 		String restoran_i = req.getParameter("id");
 		Integer restorani_id = Integer.parseInt(restoran_i);
-		
+		System.out.println(restorani_id);
 
 		Restoran restoran = restoranDao.findById(restorani_id);
 		req.setAttribute("restoranRezervacija", restoran);

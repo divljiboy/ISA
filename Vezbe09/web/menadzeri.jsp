@@ -39,10 +39,6 @@
 	}
 
 </script>
-
-
-
-
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">
@@ -154,7 +150,6 @@
 						<div>
 							<fmt:message key="mojeposete" />
 						</div></a></li>
-dsad
 				<li><a href="home.jsp"><i class="fa fa-user"></i>
 						<div>
 							<c:out value="${gost.firstName}"></c:out>

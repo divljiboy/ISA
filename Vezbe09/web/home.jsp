@@ -30,8 +30,6 @@
 <body>
 	<div id="wrapper">
 
-
-
 		<c:if test="${sessionScope.admin!=null}">
 			<ul >
 				<li><a href="./InitRestoranController"><i class="fa fa-cutlery"></i>
@@ -46,7 +44,7 @@
 						<div>
 							<fmt:message key="menadzeri" />
 						</div></a></li>
-				<li><a href="InitJelovniciController"><i class="fa fa-glass"></i>
+				<li><a href="./InitJelovniciController"><i class="fa fa-glass"></i>
 						<div>
 							<fmt:message key="jelovnici" />
 						</div></a></li>
@@ -94,9 +92,6 @@
 			<img id="e1"
 				src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png"
 				alt="Product Name" width="200px" height="200px" "/>
-
-
-
 		</c:if>
 
 
@@ -203,15 +198,6 @@
 						<div>
 							<fmt:message key="jelovnici" />
 						</div></a></li>
-				<li><a href="#"><i class="fa fa-user"></i>
-						<div>
-							<fmt:message key="mojNalog" />
-						</div></a></li>
-				<li><a href="./InitJelaController"><i class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="jelo" />
-						</div></a></li>
-
 				<li><a href="home.jsp"><i
 						class="fa fa-paper-plane"></i>
 						<div>

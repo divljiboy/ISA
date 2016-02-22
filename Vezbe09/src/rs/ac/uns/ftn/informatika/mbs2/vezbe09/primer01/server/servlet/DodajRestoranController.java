@@ -37,7 +37,6 @@ public class DodajRestoranController extends HttpServlet {
 
 		String ime = null;
 		String opis = null;
-		Integer brStolova = null;
 		Restoran restoran = null;
 		HttpSession session = req.getSession();
 		
@@ -49,16 +48,11 @@ public class DodajRestoranController extends HttpServlet {
 				&& !req.getParameter("opis_restorana").equals("")) {
 			opis = req.getParameter("opis_restorana");
 		}
-		if (req.getParameter("br_stolova") != null
-				&& !req.getParameter("br_stolova").equals("")) {
-			brStolova = Integer.parseInt(req.getParameter("br_stolova"));
-		}
 
-		if (ime != null && opis != null && brStolova != null) {
+		if (ime != null && opis != null ) {
 			restoran = new Restoran();
 			restoran.setNaziv(ime);
 			restoran.setOpis(opis);
-			restoran.setBroj_stolova(brStolova);
 		}
 		
 		

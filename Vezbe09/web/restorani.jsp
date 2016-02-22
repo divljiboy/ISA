@@ -40,7 +40,7 @@
 
 
 
-
+<script src="sorttable.js"></script>
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">
@@ -98,13 +98,13 @@
 			</ul>
 
 			<form>
-				<table>
+				<table class="sortable">
 					<thead>
 						<tr>
 							<th>Ime restorana</th>
 							<th>Opis</th>
-							<th>Broj stolova:</th>
-							<th>&nbsp;</th>
+							<th><a href="dodajRestoran.jsp">Dodaj restoran</a></th>
+
 						</tr>
 					</thead>
 					<tbody>
@@ -112,14 +112,9 @@
 							<tr>
 								<td>${restoran.naziv}</td>
 								<td>${restoran.opis}</td>
-								<td>${restoran.broj_stolova}</td>
 								<td><a href="./RestoranAdminController?id=${restoran.id}">Obrisi</a></td>
 							</tr>
 						</c:forEach>
-						<th>&nbsp;</th>
-						<th>&nbsp;</th>
-						<th>&nbsp;</th>
-						<td><a href="dodajRestoran.jsp">Dodaj restoran</a></td>
 					</tbody>
 				</table>
 			</form>
@@ -169,14 +164,17 @@
 							<fmt:message key="odjava" />
 						</div> </a></li>
 			</ul>
-			<form>
-				<table>
+			<form action="./InitRestoranController" method="post">
+				<table class="sortable">
 					<thead>
 						<tr>
 							<th>Ime restorana</th>
+							<th>Opis</th>
 							<th>Rejting</th>
 							<th>Prijatelji</th>
-							<th>&nbsp;</th>
+							<th><input type="text" name="ImeIliVrsta"
+								placeholder="Unesite ime ili opis restorana"></th>
+							<th><button type="submit">Pretrazi</button></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -184,9 +182,10 @@
 						<c:forEach items="${restorani}" var="restoran">
 							<tr>
 								<td>${restoran.naziv}</td>
+								<td>${restoran.opis}</td>
 								<td>&nbsp;</td>
 								<td>&nbsp;</td>
-								<td><a href="./RezervacijaController?id=${restoran.id}">Rezervisi</a></td>
+								<td colspan="2"><a href="./RezervacijaController?id=${restoran.id}">Rezervisi</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -211,16 +210,12 @@
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="./InitJelovniciController"><i class="fa fa-users"></i>
+				<li><a href="./InitJelovniciController"><i
+						class="fa fa-glass"></i>
 						<div>
-							<fmt:message key="prijatelji" />
+							<fmt:message key="jelovnici" />
 						</div></a></li>
-				<li><a href="#"><i class="fa fa-user"></i>
-						<div>
-							<fmt:message key="mojNalog" />
-						</div></a></li>
-
-				<li><a href="#"><i class="fa fa-paper-plane"></i>
+				<li><a href="home.jsp"><i class="fa fa-paper-plane"></i>
 						<div>
 							<c:out value="${menadzer.firstName}"></c:out>
 							&nbsp;&nbsp;
@@ -231,33 +226,26 @@
 						<div>
 							<fmt:message key="odjava" />
 						</div> </a></li>
-
 			</ul>
 
 			<form>
-				<table>
+				<table class="sortable">
 					<thead>
 						<tr>
 							<th>Ime restorana</th>
+							<th>Opis</th>
+							<th>&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr align="center">
-							<td><a href="./KonfiguracijaMesta?id=${restoran.id}">${restoran.naziv}</a></td>
+						<tr>
+							<td>${restoran.naziv}</td>
+							<td>${restoran.opis}</td>
+							<td><a href="./IzmenaRestoranaMenadzer">Izmeni</a></td>
 						</tr>
 					</tbody>
 				</table>
 			</form>
-
-
-
-
-
-
-
-
-
-
 
 		</c:if>
 

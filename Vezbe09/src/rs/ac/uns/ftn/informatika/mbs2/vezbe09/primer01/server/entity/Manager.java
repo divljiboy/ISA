@@ -1,7 +1,5 @@
 package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.NamedQuery;
@@ -17,8 +15,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name="manager")
 @NamedQuery(name = "findMenadzerSaKorisnickimImenomILozinkom", query = "SELECT k FROM Manager k WHERE k.username like :korisnickoIme AND k.password LIKE :lozinka")
-public class Manager extends User implements Serializable{
-	
+public class Manager extends User{
+
+	private static final long serialVersionUID = -8213271469967659550L;
+
 	public Manager(){
 		super();
 	}

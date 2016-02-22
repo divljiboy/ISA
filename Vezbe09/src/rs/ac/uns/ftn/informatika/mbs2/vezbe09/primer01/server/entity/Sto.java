@@ -2,8 +2,6 @@ package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +18,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "sto")
-public class Sto implements Serializable{
+public class Sto {
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -31,17 +29,18 @@ public class Sto implements Serializable{
 	private int broj;
 
 	@Column(name = "pozicija_stola", unique = false, nullable = false)
-	private int pozicija;
+	private String pozicija;
 	
 		
 	@OneToOne()
 	@JoinColumn(name = "restoran_id" ,referencedColumnName="restoran_id", nullable = false)
 	public Restoran restoran;
-
+	
+	
 	public Sto() {
 	}
 
-	public Sto(int br, int pozicija) {
+	public Sto(int br, String pozicija) {
 		this.broj = br;
 		this.pozicija = pozicija;
 		
@@ -63,11 +62,11 @@ public class Sto implements Serializable{
 		this.broj = broj;
 	}
 
-	public int getPozicija() {
+	public String getPozicija() {
 		return pozicija;
 	}
 
-	public void setPozicija(int pozicija) {
+	public void setPozicija(String pozicija) {
 		this.pozicija = pozicija;
 	}
 

@@ -1,6 +1,7 @@
 package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -10,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
@@ -20,7 +23,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "jelo")
-public class Jelo implements Serializable {
+@NamedQueries({
+@NamedQuery(name="findJelasaJelovnika",query = ("SELECT j FROM Jelo j,JelovnikJelo b WHERE b.jelovnik.id=:k AND b.jelo_id = j.jelo_id")),
+@NamedQuery(name="svaJelakojaNisuNaJelovniku", query="SELECT * FROM Jelo j,JelovnikJelo jj WHERE j.jelo_id = jj.jelo_id AND jj.jelovnik_id != jel")
+})
+public class Jelo implements Serializable{
+
+
+	private static final long serialVersionUID = -705691556472144536L;
 
 	public Jelo() {
 	}
@@ -45,8 +55,8 @@ public class Jelo implements Serializable {
 	@Column(name = "jelo_cena", unique = false, nullable = false)
 	private Double cena;
 
-	@ManyToMany(cascade = CascadeType.ALL, mappedBy = "jelo")
-	private Set<Jelovnik> jelovnik;
+	@ManyToMany(cascade = CascadeType.ALL, mappedBy = "jela")
+	private Set<Jelovnik> jelovnik = new HashSet<Jelovnik>();
 
 	public Set<Jelovnik> getJelovnik() {
 		return jelovnik;

@@ -7,10 +7,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDaoLocal;
 
+/**
+ * 
+ * @author Borko Arsovic
+ *
+ */
 public class KonfiguracijaMesta extends HttpServlet {
 
 	private static final long serialVersionUID = -768414798218043830L;
@@ -22,13 +28,14 @@ public class KonfiguracijaMesta extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-		String restoran_id = req.getParameter("id");
-		Restoran r = restoranDao.findById(Integer.parseInt(restoran_id));
 		
-		req.setAttribute("editRestoran", r);
-		req.setAttribute("mestoRestoran", r.getBroj_stolova());
-		getServletContext().getRequestDispatcher("/konfiguracijaMesta.jsp").forward(req, resp);
+		HttpSession session = req.getSession();
 		
+		if(session.getAttribute("menadzer")!=null){
+			Manager m = (Manager) session.getAttribute("menadzer");
+			session.setAttribute("restoran", m.getRestoran());
+			getServletContext().getRequestDispatcher("/konfiguracijaMesta.jsp").forward(req, resp);
+		}
 	}
 	
 	

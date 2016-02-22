@@ -1,6 +1,7 @@
 
 <%
-	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("Cache-Control",
+	"no-cache, no-store, must-revalidate");
 	response.setHeader("Pragma", "no-cache");
 	response.setDateHeader("Expires", 0);
 %>
@@ -38,17 +39,19 @@
 </script>
 
 <script>
-
-$( function2() {
-	  $('td').toggle( function() {
-	    $(this).css('background', 'red');
-	  },function(){
-	  $(this).css('background', 'white');
-	  });
-	} );
+function getCellRow(td){
+    td= td? td.target:window.event? event.srcElement:'';
+    var rc= [], pa= td.parentNode;
+    if(pa.tagName== 'TR'){
+        alert([pa.rowIndex, td.cellIndex]);
+        var x = document.getElementsByTagName('table')[0].rows[pa.rowIndex].cells;
+        document.location = "http://localhost:8080/Vezbe09/KonfiguracijaMesta1?red="+pa.rowIndex+"&kolona="+td.cellIndex;
+    }
+}
+window.onload= function(){
+    document.getElementsByTagName('table')[0].onclick=getCellRow;
+}
 </script>
-
-
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">
@@ -57,8 +60,6 @@ $( function2() {
 
 <body onload="pr()">
 	<div id="wrapper">
-
-
 
 		<c:if test="${sessionScope.admin!=null}">
 			<jsp:useBean id="restorani2" type="java.util.List<Restoran>"
@@ -111,7 +112,6 @@ $( function2() {
 						<tr>
 							<th>Ime restorana</th>
 							<th>Opis</th>
-							<th>Broj stolova:</th>
 							<th>&nbsp;</th>
 						</tr>
 					</thead>
@@ -120,30 +120,18 @@ $( function2() {
 							<tr>
 								<td>${restoran.naziv}</td>
 								<td>${restoran.opis}</td>
-								<td>${restoran.broj_stolova}</td>
 								<td><a href="./RestoranAdminController?id=${restoran.id}">Obrisi</a></td>
 							</tr>
 						</c:forEach>
-						<th>&nbsp;</th>
-						<th>&nbsp;</th>
-						<th>&nbsp;</th>
-						<td><a href="dodajRestoran.jsp">Dodaj restoran</a></td>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td><a href="dodajRestoran.jsp">Dodaj restoran</a></td>
+						</tr>
 					</tbody>
 				</table>
 			</form>
 		</c:if>
-
-
-
-
-
-
-
-
-
-
-
-
 
 		<c:if test="${sessionScope.gost!=null}">
 			<jsp:useBean id="restorani" type="java.util.List<Restoran>"
@@ -202,16 +190,10 @@ $( function2() {
 			</form>
 		</c:if>
 
-
-
-
-
-
-
 		<c:if test="${sessionScope.menadzer!=null}">
-			<jsp:useBean id="editRestoran"
+			<jsp:useBean id="restoran"
 				type="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran"
-				scope="request" />
+				scope="session" />
 
 			<ul>
 				<li><a href="./InitRestoranController"><i
@@ -220,16 +202,11 @@ $( function2() {
 							<fmt:message key="restorani" />
 						</div></a></li>
 				<li><a href="./InitJelovniciController"><i
-						class="fa fa-users"></i>
+						class="fa fa-glass"></i>
 						<div>
-							<fmt:message key="prijatelji" />
+							<fmt:message key="jelovnici" />
 						</div></a></li>
-				<li><a href="#"><i class="fa fa-user"></i>
-						<div>
-							<fmt:message key="mojNalog" />
-						</div></a></li>
-
-				<li><a href="#"><i class="fa fa-paper-plane"></i>
+				<li><a href="home.jsp"><i class="fa fa-paper-plane"></i>
 						<div>
 							<c:out value="${menadzer.firstName}"></c:out>
 							&nbsp;&nbsp;
@@ -240,49 +217,70 @@ $( function2() {
 						<div>
 							<fmt:message key="odjava" />
 						</div> </a></li>
-
 			</ul>
-
-			<form>
+			<form >
 				<table>
 					<thead>
 						<tr>
-							<th>Ime restorana</th>
+							<th colspan="4">Konfiguracija mesta za restoran:</th>
+							<th colspan="4">${restoran.naziv}</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>${editRestoran.naziv}</td>
-							<td>${editRestoran.opis}</td>
-							<td>${editRestoran.broj_stolova}</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+
 					</tbody>
 				</table>
-
-				<table>
-					<tr>
-						<td onclick="function2()">AAA</td>
-						<td onclick="function2()">BBB</td>
-						<td onclick="function2()">CCC</td>
-					</tr>
-					<tr>
-						<td onclick="function2()">DDD</td>
-						<td onclick="function2()">EEE</td>
-						<td onclick="function2()">FFF</td>
-					</tr>
-				</table>
 			</form>
-
-
-
-
-
-
-
-
-
-
-
 		</c:if>
 
 	</div>

@@ -1,6 +1,7 @@
 package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -53,8 +54,17 @@ public class InitRestoranController  extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doPost(req, resp);
+
+		HttpSession session = req.getSession();
+		
+		if(session.getAttribute("gost")!=null){
+			
+			String ImeIliVrsta = req.getParameter("ImeIliVrsta");
+			
+			List<Restoran> restorani =  restoranDao.pretragaRestorana(ImeIliVrsta);
+			session.setAttribute("restorani", restorani);
+			getServletContext().getRequestDispatcher("/restorani.jsp").forward(req, resp);
+		}
 	}
 	
 

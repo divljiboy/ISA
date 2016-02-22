@@ -41,7 +41,7 @@ public class DodajMenadzeraController extends HttpServlet {
 		if (restoran_id != null) {
 			Manager manager = managerDao.findById(restoran_id);
 			managerDao.remove(manager);
-			
+			System.out.println(manager.getFirstName());
 		}
 		
 
@@ -98,7 +98,11 @@ public class DodajMenadzeraController extends HttpServlet {
 				
 		}
 		
-	
+		System.out.println(manager.getFirstName());
+		System.out.println(manager.getLastName());
+		System.out.println(manager.getUsername());
+		System.out.println(manager.getPassword());
+		System.out.println(managerDao.findAll().size());
 
 		try {
 			if (!managerDao.findAll().contains(manager)) {

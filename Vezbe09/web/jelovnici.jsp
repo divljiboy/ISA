@@ -28,13 +28,25 @@
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="path/to/font-awesome/css/font-awesome.min.css">
+
+<script type="text/javascript">
+	function pr() {
+		var x = document.URL;
+		if (x === "http://localhost:8080/Vezbe09/jelovnici.jsp?Nijeuspelo") {
+			alert("Upis nije ispavan!");
+		}
+	}
+</script>	
+	
+	
+	
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">
 	<c:redirect url="./start.jsp" />
 </c:if>
 
-<body >
+<body>
 	<div id="wrapper">
 
 
@@ -88,16 +100,14 @@
 				<table>
 					<thead>
 						<tr>
-							<th>Naziv</th>
-							<th>Restorani</th>
+							<th>Naziv jelovnika</th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach items="${sviJelovnici}" var="jelovnik">
 							<tr>
-								<td>${jelovnik.naziv}</td>
-								<td>${jelovnik.restorani.id}</td>
-
+								<td align="center"><a
+									href="./AdminJelovniciController?id=${jelovnik.id}">${jelovnik.naziv}</a></td>
 							</tr>
 
 						</c:forEach>
@@ -154,7 +164,8 @@
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 					</tr>
-				</c:forEach>prijatelji
+				</c:forEach>
+				prijatelji
 			</table>
 
 
@@ -164,13 +175,19 @@
 
 
 		<c:if test="${sessionScope.menadzer!=null}">
-		
+			<jsp:useBean id="restoran"
+				type="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran"
+				scope="session" />
+			<jsp:useBean id="jelovnici"
+				type="java.util.HashSet<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelovnik>"
+				scope="session" />
 			<ul>
 				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="./InitJelovniciController"><i class="fa fa-glass"></i>
+				<li><a href="./InitJelovniciController"><i
+						class="fa fa-glass"></i>
 						<div>
 							<fmt:message key="jelovnici" />
 						</div></a></li>
@@ -193,55 +210,35 @@
 						</div> </a></li>
 
 			</ul>
-			
-						<form>
+
+			<form action="./IzmenaRestoranaMenadzer" method="post">
 				<table>
 					<thead>
-						<tr>
-							<th>Naziv</th>
-							<th>Restorani</th>
-							<th>&nbsp;</th>
-						</tr>
+						<th align="center"  colspan="2">Jelovnici</th>
 					</thead>
 					<tbody>
 						<c:forEach items="${jelovnici}" var="jelovnik">
 							<tr>
-								<td>${jelovnik.naziv}</td>
-								<td>${jelovnik.restorani.id}</td>
-								<td><a href="./ObrisiJelovnik?id=${jelovnik.id}">Obrisi</a></td>
+								<td><a href="./IzmenaMenijaMenadzer?id=${jelovnik.id}">${jelovnik.naziv}</a>
+								</td>
+								<td><a href="./ObrisiJelovnik?id=${jelovnik.id}">Obrisi</a> </td>
 							</tr>
-
 						</c:forEach>
-							<th>&nbsp;</th>
-							<th>&nbsp;</th>
-							
-					</tbody>
-				</table>
-			</form>
-			<form>
-				<table>
-					<thead>
+
+
 						<tr>
-							<th>Naziv</th>
-							<th>Opis</th>
+							<td>&nbsp;</td>
+							<td><a href="./DodajJelovnik">Kreiraj Jelovnik</a>
+							</td>
 						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${nisuJelovnici}" var="jelovnik">
-							<tr>
-								<td>${jelovnik.naziv}</td>
-								<td>${jelovnik.restorani.id}</td>
-                                <td><a href="./DodajJelovnik?id=${jelovnik.id}">Dodaj</a></td>
-							</tr>
-
-						</c:forEach>
-
 					</tbody>
 				</table>
+
 			</form>
-			
-			
-			
+
+
+
+
 		</c:if>
 
 	</div>

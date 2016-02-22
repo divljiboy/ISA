@@ -1,8 +1,9 @@
+
 <%
 	response.setHeader("Cache-Control",
 			"no-cache, no-store, must-revalidate");
 	response.setHeader("Pragma", "no-cache");
-	response.setDateHeader("Expires",0);
+	response.setDateHeader("Expires", 0);
 %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
@@ -217,21 +218,17 @@
 
 		<c:if test="${sessionScope.menadzer!=null}">
 			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
+				<li><a href="./InitRestoranController"><i
+						class="fa fa-cutlery"></i>
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="#"><i class="fa fa-users"></i>
+				<li><a href="./InitJelovniciController"><i
+						class="fa fa-glass"></i>
 						<div>
-							<fmt:message key="prijatelji" />
+							<fmt:message key="jelovnici" />
 						</div></a></li>
-				<li><a href="#"><i class="fa fa-user"></i>
-						<div>
-							<fmt:message key="mojNalog" />
-						</div></a></li>
-
-				<li><a href="./LogoutController"><i
-						class="fa fa-paper-plane"></i>
+				<li><a href="home.jsp"><i class="fa fa-paper-plane"></i>
 						<div>
 							<c:out value="${menadzer.firstName}"></c:out>
 							&nbsp;&nbsp;
@@ -243,6 +240,7 @@
 							<fmt:message key="odjava" />
 						</div> </a></li>
 			</ul>
+
 
 			<form action="./EditAccountController" method="post">
 				<table>
@@ -277,7 +275,7 @@
 					</tr>
 
 				</table>
-				<input type="hidden" name="id" value="${mendzer.id}">
+				<input type="hidden" name="id" value="${editAccount.id}">
 
 			</form>
 

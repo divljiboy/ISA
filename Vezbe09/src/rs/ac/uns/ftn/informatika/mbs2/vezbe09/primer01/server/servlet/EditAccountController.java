@@ -15,7 +15,12 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.AdminDaoLocal;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.GostDaoLocal;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoLocal;
-
+/**Klasa koja omogucava izmenu naloga.
+ * Svi nalozi se menjaju unutar nje. U do Get se dobijaju podaci koji se prodjedjuju na editAccount.jsp.
+ * A doPost metoda obradjuje vracane podatke
+ * @author jelica
+ *
+ */
 public class EditAccountController extends HttpServlet {
 
 	private static final long serialVersionUID = 990134022583077306L;
@@ -75,10 +80,19 @@ public class EditAccountController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-		String ime = req.getParameter("firstName");
-		String prezime = req.getParameter("lastName");
-		String lozinka = req.getParameter("password");
+		String ime = null;
+		String prezime = null;
+		String lozinka = null;
 
+		
+		if(req.getParameter("firstName")!=null && !req.getParameter("firstName").equals(""))
+			ime = req.getParameter("firstName");
+		
+		if(req.getParameter("lastName")!=null && !req.getParameter("lastName").equals(""))
+			prezime = req.getParameter("lastName");
+		
+		if(req.getParameter("password")!=null && !req.getParameter("password").equals(""))
+			lozinka = req.getParameter("password");
 		
 		HttpSession session = req.getSession();
 		Gost gost1 = (Gost) session.getAttribute("gost");

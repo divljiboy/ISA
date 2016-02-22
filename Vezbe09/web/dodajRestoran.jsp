@@ -95,10 +95,6 @@
 							<td><input type="text" name="opis_restorana" required></td>
 						</tr>
 						<tr>
-							<td>Broj stolova:</td>
-							<td><input type="number" name="br_stolova" required></td>
-						</tr>
-						<tr>
 							<td><a href="restorani.jsp">Odustani</a></td>
 							<td>
 								<button type="submit">Sacuvaj podatke</button>

@@ -34,7 +34,7 @@ public class LoginAdminController extends HttpServlet {
 			String lozinka = request.getParameter("lozinka");
 			
 			if ((korisnickoIme == null) || (korisnickoIme.equals("")) || (lozinka == null) || (lozinka.equals(""))) {
-				response.sendRedirect(response.encodeRedirectURL("./start.jsp"));
+				getServletContext().getRequestDispatcher("/start.jsp").forward(request, response);
 				return;
 			}
 			
@@ -51,7 +51,7 @@ public class LoginAdminController extends HttpServlet {
 			
 		} catch (EJBException e) {
 			if (e.getCause().getClass().equals(NoResultException.class)) {
-				response.sendRedirect(response.encodeRedirectURL("./loginKorisnik.jsp"));
+				getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
 			} else {
 				throw e;
 			}
