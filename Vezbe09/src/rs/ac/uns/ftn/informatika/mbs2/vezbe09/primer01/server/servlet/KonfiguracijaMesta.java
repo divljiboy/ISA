@@ -26,7 +26,8 @@ public class KonfiguracijaMesta extends HttpServlet {
 		Restoran r = restoranDao.findById(Integer.parseInt(restoran_id));
 		
 		req.setAttribute("editRestoran", r);
-		getServletContext().getRequestDispatcher("/kofiguracijaMesta.jsp").forward(req, resp);
+		req.setAttribute("mestoRestoran", r.getBroj_stolova());
+		getServletContext().getRequestDispatcher("/konfiguracijaMesta.jsp").forward(req, resp);
 		
 	}
 	

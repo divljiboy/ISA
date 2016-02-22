@@ -33,6 +33,7 @@ body #wrapper ul li {
 body #wrapper ul li:last-child {
   border-right: none;
 }
+td { background: white; cursor: pointer; padding: 2px }
 body #wrapper ul li:hover {
   background: #e6e6e6;
   width: 15.57143%;
@@ -58,43 +59,6 @@ body #wrapper ul li div {
   margin-top: 5px;
   font-weight: 600;
   font-size: 13px;
-}
-
-
-form table {
-  float: left;
-  width: 100%;
-  font-family: 'Arial';
-  margin: 25px auto;
-  border-collapse: collapse;
-  border: 1px solid #eee;
-  border-bottom: 2px solid #00cccc;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
-}
-form table tr:hover {
-  background: #808080;
-}
-form table tr:hover td {
-  color: #555;
-}
-form table th, table td {
-  color: #c0c0c0;
-  border: 1px solid #eee;
-  padding: 12px 35px;
-  border-collapse: collapse;
-}
-form table th {
-  background: #ffffff;
-  color: #c0c0c0;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-form table th.last {
-  border-right: none;
-}
-
-form table td{
-	background: #ffffff;
 }
 
 

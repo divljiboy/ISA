@@ -1,7 +1,6 @@
 
 <%
-	response.setHeader("Cache-Control",
-	"no-cache, no-store, must-revalidate");
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	response.setHeader("Pragma", "no-cache");
 	response.setDateHeader("Expires", 0);
 %>
@@ -38,7 +37,16 @@
 	}
 </script>
 
+<script>
 
+$( function2() {
+	  $('td').toggle( function() {
+	    $(this).css('background', 'red');
+	  },function(){
+	  $(this).css('background', 'white');
+	  });
+	} );
+</script>
 
 
 </head>
@@ -211,7 +219,8 @@
 						<div>
 							<fmt:message key="restorani" />
 						</div></a></li>
-				<li><a href="./InitJelovniciController"><i class="fa fa-users"></i>
+				<li><a href="./InitJelovniciController"><i
+						class="fa fa-users"></i>
 						<div>
 							<fmt:message key="prijatelji" />
 						</div></a></li>
@@ -249,19 +258,18 @@
 						</tr>
 					</tbody>
 				</table>
-				
-				
+
 				<table>
-				<tbody>
-				
 					<tr>
-					<td> </td>
-					<td> </td>
-					<td> </td>
-					<td> </td>
-					<td> </td>
+						<td onclick="function2()">AAA</td>
+						<td onclick="function2()">BBB</td>
+						<td onclick="function2()">CCC</td>
 					</tr>
-				</tbody>
+					<tr>
+						<td onclick="function2()">DDD</td>
+						<td onclick="function2()">EEE</td>
+						<td onclick="function2()">FFF</td>
+					</tr>
 				</table>
 			</form>
 
