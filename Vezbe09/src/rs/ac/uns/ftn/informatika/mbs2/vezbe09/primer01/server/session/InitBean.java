@@ -13,7 +13,6 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelo;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelovnik;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager;
-import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Prijateljstvo;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
 
 @Stateless
@@ -74,20 +73,23 @@ public class InitBean implements Init {
 		gost6.setPassword("gost6");
 		em.persist(gost6);
 
-		Prijateljstvo prijateljstvo1 = new Prijateljstvo();
-		prijateljstvo1.setGost(gost1);
-		prijateljstvo1.setPrijatelj2(gost2);
-		em.persist(prijateljstvo1);
-
-		Prijateljstvo prijateljstvo2 = new Prijateljstvo();
-		prijateljstvo2.setGost(gost1);
-		prijateljstvo2.setPrijatelj2(gost3);
-		em.persist(prijateljstvo2);
-
-		Prijateljstvo prijateljstvo3 = new Prijateljstvo();
-		prijateljstvo3.setGost(gost5);
-		prijateljstvo3.setPrijatelj2(gost6);
-		em.persist(prijateljstvo3);
+		Set<Gost>prijatelji1= new HashSet<Gost>();
+		prijatelji1.add(gost2);
+		prijatelji1.add(gost3);
+		prijatelji1.add(gost4);
+		
+		Set<Gost>prijatelji2= new HashSet<Gost>();
+		prijatelji1.add(gost1);
+		prijatelji1.add(gost3);
+		
+		Set<Gost>prijatelji3= new HashSet<Gost>();
+		prijatelji1.add(gost1);
+		
+		gost1.setPrijatelji(prijatelji1);
+		gost2.setPrijatelji(prijatelji2);
+		gost3.setPrijatelji(prijatelji3);
+		
+		
 
 		
 		

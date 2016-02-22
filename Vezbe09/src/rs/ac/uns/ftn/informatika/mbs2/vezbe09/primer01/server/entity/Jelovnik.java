@@ -26,11 +26,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "jelovnik")
-public class Jelovnik  implements Serializable{
+public class Jelovnik implements Serializable {
 
 	private static final long serialVersionUID = -6690772340607161081L;
-
-
 
 	public Jelovnik() {
 	}
@@ -47,19 +45,12 @@ public class Jelovnik  implements Serializable{
 	@Column(name = "jelovnik_naziv", unique = false, nullable = false)
 	private String naziv;
 
-	
-
-	
-	@ManyToMany(cascade=CascadeType.ALL, mappedBy="jelovnik") 
+	@ManyToMany(cascade = CascadeType.ALL, mappedBy = "jelovnik")
 	private Set<Restoran> restorani = new HashSet<Restoran>();
-	
-	
 
 	@ManyToMany
 	@JoinTable(name = "jelovnik_jelo", joinColumns = @JoinColumn(name = "jelovnik_id", referencedColumnName = "jelovnik_id") , inverseJoinColumns = @JoinColumn(name = "jelo_id", referencedColumnName = "jelo_id") )
-	private Set<Jelo> jela= new HashSet<Jelo>();
-	
-
+	private Set<Jelo> jela = new HashSet<Jelo>();
 
 	public Set<Restoran> getRestorani() {
 		return restorani;
@@ -88,15 +79,12 @@ public class Jelovnik  implements Serializable{
 	public void setJela(HashSet<Jelo> jela) {
 		this.jela = jela;
 	}
-	
-	
-	
 
-//	public Collection<Jelo> getJela() {
-//		if (jela == null)
-///			jela = new HashSet<Jelo>();
-//		return jela;
-//	}
+	// public Collection<Jelo> getJela() {
+	// if (jela == null)
+	/// jela = new HashSet<Jelo>();
+	// return jela;
+	// }
 
 	public Set<Jelo> getJela() {
 		return jela;
@@ -127,21 +115,21 @@ public class Jelovnik  implements Serializable{
 		}
 
 	}
-	
-	public void addJelo(Jelo jelo){
-		if(jelo == null)
+
+	public void addJelo(Jelo jelo) {
+		if (jelo == null)
 			return;
-		if(this.jela== null)
+		if (this.jela == null)
 			this.jela = new HashSet<Jelo>();
-		if(!this.jela.contains(jelo)){
+		if (!this.jela.contains(jelo)) {
 			this.jela.add(jelo);
 		}
 	}
-	
-	///Divljaku je glupavo
-	public void setJelo(Collection<Jelo> jela){
+
+	/// Divljaku je glupavo
+	public void setJelo(Collection<Jelo> jela) {
 		removeAllJela();
-		for(Iterator<Jelo> i = jela.iterator(); i.hasNext();)
+		for (Iterator<Jelo> i = jela.iterator(); i.hasNext();)
 			addJelo(i.next());
 	}
 

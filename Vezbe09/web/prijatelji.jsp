@@ -23,7 +23,9 @@
 <script src="./menuvertical.js" type="text/javascript"></script>
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="./home.css" rel="stylesheet" type="text/css" />
+<link href="./home.css" rel="stylesheet" type="text/css" /><script>( function( $ ) {
+$( document ).ready(function() {
+$('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet"
@@ -160,6 +162,39 @@
 			</tbody>	
 			</table>
 		</form>	
+		
+		<form action="./AddPrijatelja" method="post">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="2"><input type="text" name="imePrezime"
+								placeholder="Unesite ime ili prezime"></th>
+							<th colspan="2"><input type="submit" value="Pretrazi"></th>
+						</tr>
+
+						<tr>
+							<th>Ime</th>
+							<th>Prezime</th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${prijatelji}" var="prijatelj">
+							<tr>
+								<td>${prijatelj.firstName}</td>
+								<td>${prijatelj.lastName}</td>
+								<td><a href="./DodajPrijatelja?id=${prijatelj.id}">Dodaj</a></td>
+							</tr>
+						</c:forEach>
+						<tr>
+							<td><a href="./PrijateljiController">Vrati se korak
+									nazad</a></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
 
 		</c:if>
 

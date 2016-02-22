@@ -22,7 +22,9 @@
 <script src="./menuvertical.js" type="text/javascript"></script>
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="./home.css" rel="stylesheet" type="text/css" />
+<link href="./home.css" rel="stylesheet" type="text/css" /><script>( function( $ ) {
+$( document ).ready(function() {
+$('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet"

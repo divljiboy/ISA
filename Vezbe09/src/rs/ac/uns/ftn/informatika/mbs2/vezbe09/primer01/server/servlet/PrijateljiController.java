@@ -1,7 +1,7 @@
 package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet;
 
 import java.io.IOException;
-import java.util.HashSet;
+import java.util.Set;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost;
-import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Prijateljstvo;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.GostDaoLocal;
 
 /**
@@ -34,7 +33,7 @@ public class PrijateljiController extends HttpServlet {
 		HttpSession session = req.getSession();
 		if (session.getAttribute("gost") != null) {
 			Gost gost = (Gost) session.getAttribute("gost");
-			HashSet<Prijateljstvo> prijateji = gostDao.findPrijatelje(gost);
+			Set<Gost> prijateji = gostDao.findPrijatelje(gost);
 			session.setAttribute("prijatelji", prijateji);
 			getServletContext().getRequestDispatcher("/prijatelji.jsp")
 					.forward(req, resp);
