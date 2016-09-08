@@ -20,7 +20,7 @@ import javax.persistence.Table;
 
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 
@@ -126,7 +126,7 @@ public class Jelovnik implements Serializable {
 		}
 	}
 
-	/// Divljaku je glupavo
+	
 	public void setJelo(Collection<Jelo> jela) {
 		removeAllJela();
 		for (Iterator<Jelo> i = jela.iterator(); i.hasNext();)

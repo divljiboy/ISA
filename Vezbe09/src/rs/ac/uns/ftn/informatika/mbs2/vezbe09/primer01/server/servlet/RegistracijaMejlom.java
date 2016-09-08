@@ -13,7 +13,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.GostDaoLoc
 
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 public class RegistracijaMejlom extends HttpServlet {

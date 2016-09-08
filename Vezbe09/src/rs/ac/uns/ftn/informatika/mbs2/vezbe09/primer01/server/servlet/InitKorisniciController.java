@@ -26,6 +26,7 @@ public class InitKorisniciController extends HttpServlet {
 		
 		if(session.getAttribute("admin")!=null){
 			session.setAttribute("korisniciSistema", gostDao.findAll());
+			System.out.println("Velicina gostiju"+gostDao.findAll().size());
 			getServletContext().getRequestDispatcher("/prijatelji.jsp").forward(req, resp);
 		}
 		

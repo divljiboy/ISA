@@ -15,11 +15,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDaoLocal;
 
-/**
- * Klasa namenjena za izmenu restorana od strane menadzera
- * @author Borko Arsovic
- *
- */
+
 public class IzmenaRestoranaMenadzer extends HttpServlet {
 
 	private static final long serialVersionUID = 5255148579211271331L;

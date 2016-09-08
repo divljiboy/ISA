@@ -18,7 +18,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDa
 
 /**
  * Klasa koja omogucava dodavanje menija u resotoran
- * @author Borko Arsovic
+ * @author 
  *
  */
 public class DodajJelovnik extends HttpServlet {

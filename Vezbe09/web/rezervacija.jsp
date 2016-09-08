@@ -1,7 +1,10 @@
 
+
+<%@page
+	import="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost"%>
+
 <%
-	response.setHeader("Cache-Control",
-			"no-cache, no-store, must-revalidate");
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	response.setHeader("Pragma", "no-cache");
 	response.setDateHeader("Expires", 0);
 %>
@@ -11,23 +14,32 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt"%>
 
 <fmt:setBundle basename="messages.messages" />
+
+
 <jsp:useBean id="restoranRezervacija"
 	type="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran"
 	scope="request" />
 
 
+
+
 <html>
 <head>
-<script src="./menuvertical.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	function pr() {
+		var x = document.URL;
+		if (x === "http://localhost:8080/Vezbe09/restorani.jsp?Nijeuspelo") {
+			alert("Upis nije ispavan,verovatno je zauzet sto tad!");
+		}
+	}
+</script>
+<link href="./bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+	<link href="./bootstrap.min.css" rel="stylesheet" type="text/css" />
+
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="./home.css" rel="stylesheet" type="text/css" /><script>( function( $ ) {
-$( document ).ready(function() {
-$('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet"
-	href="path/to/font-awesome/css/font-awesome.min.css">
+
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">
@@ -35,114 +47,12 @@ $('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
 </c:if>
 
 <body>
-	<div id='cssmenu'>
+	<jsp:include page="./navbar.jsp" />
 
 
+	<c:if test="${sessionScope.admin!=null}">
 
-		<c:if test="${sessionScope.admin!=null}">
-			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="#"><i class="fa fa-users"></i>
-						<div>
-							<fmt:message key="prijatelji" />
-						</div></a></li>
-				<li><a href="#"><i class="fa fa-user"></i>
-						<div>
-							<fmt:message key="mojNalog" />
-						</div></a></li>
-				<li><a href="#"><i class="fa fa-rocket"></i>
-						<div>
-							<c:out value="${admin.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${admin.lastName}"></c:out>
-						</div></a></li>
-				</li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-
-			</ul>
-		</c:if>
-
-
-
-
-
-
-
-		<c:if test="${sessionScope.gost!=null}">
-			<ul>
-
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="./PrijateljiController"><i class="fa fa-users"></i>
-						<div>
-							<fmt:message key="prijatelji" />
-						</div></a></li>
-
-				<li><a href="mojeposete.jsp"></i><i class="fa fa-thumbs-up"></i>
-						<div>
-							<fmt:message key="mojeposete" />
-						</div></a></li>
-
-				<li><a href="home.jsp"><i class="fa fa-user"></i>
-						<div>
-							<c:out value="${gost.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${gost.lastName}"></c:out>
-						</div></a></li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-			</ul>
-
-			<form action="">
-				<table>
-					<tbody>
-						<tr>
-							<td>Restoran :</td>
-							<td><input type="text" value="${restoranRezervacija.naziv}"
-								readonly="readonly"></td>
-						</tr>
-						<tr>
-							<td>Datum i vreme:</td>
-							<td><input type="datetime" name="datumIVreme"></td>
-						</tr>
-						<tr>
-							<td>Trajanje:</td>
-							<td><input type="number"></td>
-						</tr>
-						<tr>
-							<td>Izaberi Sto</td>
-							<td><a href="#">Konfiguracija restorana</a></td>
-						</tr>
-
-						<tr>
-							<td>Pozovi prijatelje:</td>
-							<td><a href="#">Pozovi prijatelje</a></td>
-						</tr>
-
-						<tr>
-							<td colspan="2"><button type="submit">Kreiraj
-									Rezervaciju</button></td>
-						</tr>
-					</tbody>
-				</table>
-
-
-			</form>
-			<a href="#" class="action-button shadow animate yellow">Izmeni
-				profil</a>
-		</c:if>
+	</c:if>
 
 
 
@@ -153,40 +63,139 @@ $('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
 
 
 
+	<c:if test="${sessionScope.gost!=null}">
 
-		<c:if test="${sessionScope.menadzer!=null}">
-			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="#"><i class="fa fa-users"></i>
-						<div>
-							<fmt:message key="prijatelji" />
-						</div></a></li>
-				<li><a href="#"><i class="fa fa-user"></i>
-						<div>
-							<fmt:message key="mojNalog" />
-						</div></a></li>
 
-				<li><a href="./LogoutController"><i
-						class="fa fa-paper-plane"></i>
-						<div>
-							<c:out value="${menadzer.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${menadzer.lastName}"></c:out>
-						</div> </a></li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
+		<jsp:useBean id="prijatelji"
+			type="java.util.HashSet<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost>"
+			scope="request"></jsp:useBean>
 
-			</ul>
-		</c:if>
+
+
+		<form class="form-horizontal" action="./RezervacijaController"
+			method="post">
+			<fieldset>
+
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="textinput">Restoran</label>
+					<div class="col-md-4">
+						<input type="text" value="${restoranRezervacija.naziv}"
+							readonly="readonly"> <input type="hidden" name="restoran"
+							value="${restoranRezervacija.id}"> 
+					</div>
+				</div>
+
+		
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="textinput">Datum</label>
+					<div class="col-md-4">
+					
+					<input type="date" name="datum">
+					</div>
+					</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="textinput">Vreme</label>
+					<div class="col-md-4">
+					
+					<input type="time" name="vreme">
+				</div>
+				</div>
+				 
+
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="textinput">Restoran</label>
+					<div class="col-md-4">
+						<input type="number" name="trajanje">
+					</div>
+				</div>
+				<!-- <tr>
+					<td>Trajanje:</td>
+					<td><input type="number" name="trajanje"></td>
+				</tr> -->
+				<!-- <tr>
+					<td>Izaberi sto:</td>
+					<td><select name="rezsto">
+							<c:forEach items="${rezervacijasto}" var="p">
+								<option value="${p.id}">${p.pozicija}</option>
+
+							</c:forEach>
+					</select></td>
+				</tr>
+				 -->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="selectmultiple">Pozovi
+						prijatelje:</label>
+					<div class="col-md-4">
+						<select name="rezsto">
+							<c:forEach items="${rezervacijasto}" var="p">
+								<option value="${p.id}">${p.pozicija}</option>
+
+							</c:forEach>
+						</select>
+					</div>
+				</div>
+
+				<!--  <tr>
+					<td>Pozovi prijatelje:</td>
+					<td><select name="prija" multiple>
+							<c:forEach items="${prijatelji}" var="p">
+								<option value="${p.id}">${p.firstName}${p.lastName}</option>
+
+							</c:forEach>
+					</select></td>
+				</tr>
+				
+				
+-->
+
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="selectmultiple">Pozovi
+						prijatelje:</label>
+					<div class="col-md-4">
+						<select name="prija" multiple>
+							<c:forEach items="${prijatelji}" var="p">
+								<option value="${p.id}">${p.firstName}${p.lastName}</option>
+
+							</c:forEach>
+						</select>
+					</div>
+				</div>
+				<!-- <tr>
+					<td colspan="2"><button type="submit">Kreiraj
+							Rezervaciju</button></td>
+				</tr> -->
+				<!-- Button -->
+				<div class="form-group">
+					
+					<div class="col-md-4">
+						<button  type="submit"id="singlebutton" name="singlebutton"
+							class="btn btn-primary">Kreiraj</button>
+					</div>
+				</div>
+
+			</fieldset>
+
+		</form>
+		
+	</c:if>
+
+
+
+
+
+
+
+
+
+
+
+	<c:if test="${sessionScope.menadzer!=null}">
+
+	</c:if>
 
 	</div>
 
-
+<script src="./jquery.min.js"></script>
+	<script src="./bootstrap.min.js"></script>
 </body>
 </html>

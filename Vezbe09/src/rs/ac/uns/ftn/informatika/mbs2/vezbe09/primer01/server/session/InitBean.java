@@ -1,6 +1,8 @@
 package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session;
 
+import java.util.Date;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 import javax.ejb.Remote;
@@ -14,6 +16,8 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelo;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelovnik;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Manager;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Rezervcija;
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Sto;
 
 @Stateless
 @Remote(Init.class)
@@ -73,32 +77,27 @@ public class InitBean implements Init {
 		gost6.setPassword("gost6");
 		em.persist(gost6);
 
-		Set<Gost>prijatelji1= new HashSet<Gost>();
-		prijatelji1.add(gost2);
-		prijatelji1.add(gost3);
-		prijatelji1.add(gost4);
-		
-		Set<Gost>prijatelji2= new HashSet<Gost>();
-		prijatelji1.add(gost1);
-		prijatelji1.add(gost3);
-		
-		Set<Gost>prijatelji3= new HashSet<Gost>();
-		prijatelji1.add(gost1);
-		
-		gost1.setPrijatelji(prijatelji1);
-		gost2.setPrijatelji(prijatelji2);
-		gost3.setPrijatelji(prijatelji3);
-		
-		
-
-		
-		
-		
+		/*
+		 * Set<Gost>prijatelji1= new HashSet<Gost>(); prijatelji1.add(gost2);
+		 * prijatelji1.add(gost3); prijatelji1.add(gost4);
+		 * 
+		 * Set<Gost>prijatelji2= new HashSet<Gost>(); prijatelji1.add(gost1);
+		 * prijatelji1.add(gost3);
+		 * 
+		 * Set<Gost>prijatelji3= new HashSet<Gost>(); prijatelji1.add(gost1);
+		 * 
+		 * gost1.setPrijatelji(prijatelji1); gost2.setPrijatelji(prijatelji2);
+		 * gost3.setPrijatelji(prijatelji3);
+		 */
+		gost1.dodajPrijateljaa(gost2);
+		gost1.dodajPrijateljaa(gost3);
+		gost2.dodajPrijateljaa(gost4);
+		gost4.dodajPrijateljaa(gost1);
+		gost2.dodajPrijateljaa(gost6);
 
 		Restoran restoran1 = new Restoran();
 		restoran1.setNaziv("Plava Frajla");
 		restoran1.setOpis("Domaca kuhinja");
-		em.persist(restoran1);
 
 		Restoran restoran2 = new Restoran();
 		restoran2.setNaziv("Panceta");
@@ -109,11 +108,6 @@ public class InitBean implements Init {
 		restoran3.setNaziv("Fontana");
 		restoran3.setOpis("Morska");
 		em.persist(restoran3);
-		
-		
-		
-		
-		
 
 		Manager manager = new Manager();
 		manager.setFirstName("Zika");
@@ -122,9 +116,7 @@ public class InitBean implements Init {
 		manager.setPassword("menadzer");
 		manager.setRestoran(restoran1);
 		em.persist(manager);
-		
-		
-		
+
 		Manager manager1 = new Manager();
 		manager1.setFirstName("Mika");
 		manager1.setLastName("Mikic");
@@ -132,8 +124,7 @@ public class InitBean implements Init {
 		manager1.setPassword("menadzer1");
 		manager1.setRestoran(restoran2);
 		em.persist(manager1);
-		
-		
+
 		Manager manager2 = new Manager();
 		manager2.setFirstName("Pera");
 		manager2.setLastName("Peric");
@@ -141,39 +132,28 @@ public class InitBean implements Init {
 		manager2.setPassword("menadzer2");
 		manager2.setRestoran(restoran3);
 		em.persist(manager2);
-		
-		
-		Set<Manager>menadzeri1 = new HashSet<Manager>();
+
+		Set<Manager> menadzeri1 = new HashSet<Manager>();
 		menadzeri1.add(manager);
-		
-		Set<Manager>menadzeri2 = new HashSet<Manager>();
+
+		Set<Manager> menadzeri2 = new HashSet<Manager>();
 		menadzeri2.add(manager2);
-		
-		
-		
-		Set<Manager>menadzeri3 = new HashSet<Manager>();
+
+		Set<Manager> menadzeri3 = new HashSet<Manager>();
 		menadzeri3.add(manager1);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		Random re = new Random();
+
+		for (int i = 0; i < 5; i++) {
+			Sto s = new Sto();
+			s.setBroj(i  +1);
+			s.setPozicija(re.nextInt(17)+1);
+			s.setRestoran(restoran2);
+			em.persist(s);
+
+			
+		}
+		em.persist(restoran1);
+
 
 		Jelovnik jelovnik1 = new Jelovnik();
 		jelovnik1.setNaziv("Meni1");
@@ -198,8 +178,6 @@ public class InitBean implements Init {
 
 		HashSet<Jelovnik> meni2 = new HashSet<Jelovnik>();
 		meni2.add(jelovnik2);
-
-
 
 		Jelo jelo1 = new Jelo();
 		jelo1.setNaziv("Sarmica od zelja");
@@ -260,13 +238,12 @@ public class InitBean implements Init {
 		jelo10.setOpis("Domaca supa");
 		jelo10.setCena(250.00);
 		em.persist(jelo10);
-		
-		
+
 		restoran1.addJelovnik(jelovnik1);
 		restoran1.addJelovnik(jelovnik3);
 		restoran2.addJelovnik(jelovnik2);
 		restoran3.addJelovnik(jelovnik3);
-		
+
 		jelovnik1.addJelo(jelo1);
 		jelovnik1.addJelo(jelo2);
 		jelovnik1.addJelo(jelo3);
@@ -279,6 +256,6 @@ public class InitBean implements Init {
 		jelovnik3.addJelo(jelo10);
 
 		
-
+		
 	}
 }

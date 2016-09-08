@@ -17,7 +17,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.JelovnikDa
 
 /**
  * Klasa namenjena da podrzi pretragu jela koja nisu u jelovniku
- * @author Borko Arsovic
+ * @author 
  *
  */
 public class PretragaJela extends HttpServlet {

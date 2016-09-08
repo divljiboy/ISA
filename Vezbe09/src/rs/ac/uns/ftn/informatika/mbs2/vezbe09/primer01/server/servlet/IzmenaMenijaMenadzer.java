@@ -15,7 +15,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelovnik;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.JelovnikDaoLocal;
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 public class IzmenaMenijaMenadzer extends HttpServlet {

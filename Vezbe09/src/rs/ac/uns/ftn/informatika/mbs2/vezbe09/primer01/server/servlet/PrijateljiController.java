@@ -15,7 +15,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.GostDaoLoc
 
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 
@@ -34,7 +34,10 @@ public class PrijateljiController extends HttpServlet {
 		if (session.getAttribute("gost") != null) {
 			Gost gost = (Gost) session.getAttribute("gost");
 			Set<Gost> prijateji = gostDao.findPrijatelje(gost);
+			Set<Gost> nisuprijatelji=gostDao.findAllKojiMuNisuPrijatelji(gost);
 			session.setAttribute("prijatelji", prijateji);
+			session.setAttribute("nisuprijatelji", nisuprijatelji);
+			
 			getServletContext().getRequestDispatcher("/prijatelji.jsp")
 					.forward(req, resp);
 		}

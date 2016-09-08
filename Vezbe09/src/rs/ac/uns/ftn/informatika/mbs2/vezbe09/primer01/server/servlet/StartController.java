@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 public class StartController extends HttpServlet {

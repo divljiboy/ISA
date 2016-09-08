@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 @MappedSuperclass

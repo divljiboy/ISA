@@ -20,16 +20,13 @@
 
 <html>
 <head>
-<script src="./menuvertical.js" type="text/javascript"></script>
+
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="./home.css" rel="stylesheet" type="text/css" /><script>( function( $ ) {
-$( document ).ready(function() {
-$('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet"
-	href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+<link href="./bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+	<link href="./bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript">
 	function pr() {
@@ -45,14 +42,24 @@ function getCellRow(td){
     td= td? td.target:window.event? event.srcElement:'';
     var rc= [], pa= td.parentNode;
     if(pa.tagName== 'TR'){
-        alert([pa.rowIndex, td.cellIndex]);
+      //  alert([pa.rowIndex, td.cellIndex]);
         var x = document.getElementsByTagName('table')[0].rows[pa.rowIndex].cells;
-        document.location = "http://localhost:8080/Vezbe09/KonfiguracijaMesta1?red="+pa.rowIndex+"&kolona="+td.cellIndex;
+        //document.location = "http://localhost:8080/Vezbe09/KonfiguracijaMesta1?red="+pa.rowIndex+"&kolona="+td.cellIndex;
     }
 }
 window.onload= function(){
     document.getElementsByTagName('table')[0].onclick=getCellRow;
 }
+
+
+
+
+$('your_table').observe('click', function(event) {
+	  var clickedCell = event.findElement('td');
+	  if (clickedCell) {
+	   clickedCell.setStyle({ background: '#dfd' });
+	  }
+	});
 </script>
 </head>
 <c:if
@@ -61,53 +68,13 @@ window.onload= function(){
 </c:if>
 
 <body onload="pr()">
-	<div id='cssmenu'>
+	<jsp:include page="./navbar.jsp" />
 
 		<c:if test="${sessionScope.admin!=null}">
 			<jsp:useBean id="restorani2" type="java.util.List<Restoran>"
 				scope="session" />
 
-			<ul>
-				<li><a href="./InitRestoranController"><i
-						class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="./InitKorisniciController"><i
-						class="fa fa-users"></i>
-						<div>
-							<fmt:message key="korisnici" />
-						</div></a></li>
-				<li><a href="./InitMenadzerController"><i
-						class="fa fa-user"></i>
-						<div>
-							<fmt:message key="menadzeri" />
-						</div></a></li>
-				<li><a href="InitJelovniciController"><i
-						class="fa fa-glass"></i>
-						<div>
-							<fmt:message key="jelovnici" />
-						</div></a></li>
-
-				<li><a href="InitJelaController"><i class="fa fa-lemon-o"></i>
-						<div>
-							<fmt:message key="jela" />
-						</div></a></li>
-
-				<li><a href="home.jsp"><i class="fa fa-rocket"></i>
-						<div>
-							<c:out value="${admin.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${admin.lastName}"></c:out>
-						</div></a></li>
-				</li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-			</ul>
-
+			
 			<form>
 				<table>
 					<thead>
@@ -138,35 +105,7 @@ window.onload= function(){
 		<c:if test="${sessionScope.gost!=null}">
 			<jsp:useBean id="restorani" type="java.util.List<Restoran>"
 				scope="session" />
-			<ul>
-
-				<li><a href="./InitRestoranController"><i
-						class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="./PrijateljiController"><i class="fa fa-users"></i>
-						<div>
-							<fmt:message key="prijatelji" />
-						</div></a></li>
-
-				<li><a href="mojeposete.jsp"></i><i class="fa fa-thumbs-up"></i>
-						<div>
-							<fmt:message key="mojeposete" />
-						</div></a></li>
-
-				<li><a href="home.jsp"><i class="fa fa-user"></i>
-						<div>
-							<c:out value="${gost.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${gost.lastName}"></c:out>
-						</div></a></li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-			</ul>
+			
 			<form>
 				<table>
 					<thead>
@@ -197,31 +136,9 @@ window.onload= function(){
 				type="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran"
 				scope="session" />
 
-			<ul>
-				<li><a href="./InitRestoranController"><i
-						class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="./InitJelovniciController"><i
-						class="fa fa-glass"></i>
-						<div>
-							<fmt:message key="jelovnici" />
-						</div></a></li>
-				<li><a href="home.jsp"><i class="fa fa-paper-plane"></i>
-						<div>
-							<c:out value="${menadzer.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${menadzer.lastName}"></c:out>
-						</div> </a></li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-			</ul>
-			<form >
-				<table>
+			
+			<form  action="./KonfiguracijaMesta1" method="post">
+				<table class="table table-inverse">
 					<thead>
 						<tr>
 							<th colspan="4">Konfiguracija mesta za restoran:</th>
@@ -230,63 +147,67 @@ window.onload= function(){
 					</thead>
 					<tbody>
 						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="0" /></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="1" /></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="2" /></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="3" /></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="4" /></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="5" /></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="6" /></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="7" /></td>
 						</tr>
 						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="8"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="9"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="10"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="11"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="12"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="13"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="14"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="15"/></td>
 						</tr>
 						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="16"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="17"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="18"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="19"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="20"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="21"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="22"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="23"/></td>
 						</tr>
 						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="23"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="24"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="25"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="26"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="27"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="28"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="29"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="30"/></td>
 						</tr>
 						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="31"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="32"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="33"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="34"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="35"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="36"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="37"/></td>
+							<td bgcolor="#FF0000"><input type="checkbox" name="sto" value="38"/></td>
 						</tr>
 
 					</tbody>
 				</table>
+				
+				<button type="submit"  class="btn btn-success">Success</button>
+				
 			</form>
 		</c:if>
 
-	</div>
-
+	
+<script src="./jquery.min.js"></script>
+	<script src="./bootstrap.min.js"></script>
 
 </body>
 </html>

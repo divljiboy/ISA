@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 

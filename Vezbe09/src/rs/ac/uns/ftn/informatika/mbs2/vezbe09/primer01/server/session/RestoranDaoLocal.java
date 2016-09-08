@@ -12,7 +12,8 @@ public interface RestoranDaoLocal extends GenericDaoLocal<Restoran, Integer> {
     public HashSet<Jelovnik> ucitajJelovnike(Restoran k);
     public HashSet<Jelovnik> obrisiJelovnike(Restoran r, Jelovnik j);
     public HashSet<Jelovnik> dodajJelovnikURestoran(Restoran r, Jelovnik j);
-	public void addSto(Restoran restoran, Sto sto);
+	//public void addSto(Restoran restoran, Sto sto);
 	public List<Restoran> pretragaRestorana(String s);
+	//public void obrisiStolove(Restoran s);
 
 }

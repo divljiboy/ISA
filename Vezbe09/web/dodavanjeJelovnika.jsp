@@ -52,7 +52,7 @@ $('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
 </c:if>
 
 <body onload="pr()">
-	<div id='cssmenu'>
+	<jsp:include page="./navbar.jsp" />
 
 
 
@@ -60,46 +60,7 @@ $('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
 			<jsp:useBean id="restorani2" type="java.util.List<Restoran>"
 				scope="session" />
 
-			<ul>
-				<li><a href="./InitRestoranController"><i
-						class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="./InitKorisniciController"><i
-						class="fa fa-users"></i>
-						<div>
-							<fmt:message key="korisnici" />
-						</div></a></li>
-				<li><a href="./InitMenadzerController"><i
-						class="fa fa-user"></i>
-						<div>
-							<fmt:message key="menadzeri" />
-						</div></a></li>
-				<li><a href="InitJelovniciController"><i
-						class="fa fa-glass"></i>
-						<div>
-							<fmt:message key="jelovnici" />
-						</div></a></li>
-
-				<li><a href="InitJelaController"><i class="fa fa-lemon-o"></i>
-						<div>
-							<fmt:message key="jela" />
-						</div></a></li>
-
-				<li><a href="home.jsp"><i class="fa fa-rocket"></i>
-						<div>
-							<c:out value="${admin.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${admin.lastName}"></c:out>
-						</div></a></li>
-				</li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-			</ul>
+	
 
 			<form>
 				<table>
@@ -138,29 +99,7 @@ $('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
 			<jsp:useBean id="restoran"
 				type="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran"
 				scope="session" />
-			<ul>
-				<li><a href="./InitRestoranController"><i
-						class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="./InitJelovniciController"><i
-						class="fa fa-glass"></i>
-						<div>
-							<fmt:message key="jelovnici" />
-						</div></a></li>
-				<li><a href="home.jsp"><i class="fa fa-paper-plane"></i>
-						<div>
-							<c:out value="${menadzer.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${menadzer.lastName}"></c:out>
-						</div> </a></li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-			</ul>
+			
 			<form action="./DodajJelovnik" method="post">
 				<table>
 					<tbody>
@@ -175,7 +114,7 @@ $('#cssmenu').prepend('<div id="menu-button">Menu</div>');</script>
 			</form>
 		</c:if>
 
-	</div>
+	
 
 
 </body>

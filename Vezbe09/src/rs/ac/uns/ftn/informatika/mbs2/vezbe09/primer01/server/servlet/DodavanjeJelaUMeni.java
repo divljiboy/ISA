@@ -17,7 +17,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.JelovnikDa
 
 /**
  * Klasa koja omogucava dodavanje jela u jelovnik
- * @author Borko Arsovic
+ * @author 
  *
  */
 public class DodavanjeJelaUMeni extends HttpServlet {

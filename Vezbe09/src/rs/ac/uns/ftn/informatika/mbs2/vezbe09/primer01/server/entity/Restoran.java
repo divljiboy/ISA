@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +24,7 @@ import javax.persistence.Table;
 
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 
@@ -55,9 +56,7 @@ public class Restoran implements Serializable{
 	private String opis;
 
 
-	@OneToMany(cascade = { ALL }, fetch = LAZY, mappedBy = "restoran")
-	private Set<Sto> stolovi = new HashSet<Sto>();
-
+	
 	@OneToMany(cascade = { ALL }, fetch = LAZY, mappedBy = "restoran")
 	private Set<Manager> menadzeri = new HashSet<Manager>();
 	
@@ -93,9 +92,7 @@ public class Restoran implements Serializable{
 	}
 
 
-	public void setSto(HashSet<Sto> stolovi) {
-		this.stolovi = stolovi;
-	}
+
 
 
 
@@ -119,13 +116,7 @@ public class Restoran implements Serializable{
 	//	return this.jelovnik;
 	//}
 	
-	public Set<Sto> getStolovi() {
-		return stolovi;
-	}
-
-	public void setStolovi(Set<Sto> stolovi) {
-		this.stolovi = stolovi;
-	}
+	
 
 	public HashSet<Jelovnik> getJelovnik() {
 		return (HashSet<Jelovnik>) jelovnik;
@@ -142,12 +133,6 @@ public class Restoran implements Serializable{
 	}
 	
 	
-	public Iterator<Sto> getIteratorSto(){
-		if(stolovi == null){
-			stolovi = new HashSet<Sto>();
-		}
-		return stolovi.iterator();
-	}
 	
 	public Iterator<Jelovnik> getIteratorJelovnik(){
 		if(jelovnik == null){
@@ -166,15 +151,19 @@ public class Restoran implements Serializable{
 	
 	
 	
-	public void addSto(Sto sto){
+	/*public void addSto(Sto sto){
+		System.out.println("Stolovi od restorana pre"+stolovi.size());
+		
 		if(sto == null)
 			return;
 		if(stolovi == null)
 			stolovi = new HashSet<Sto>();
 		if(!stolovi.contains(sto))
 			stolovi.add(sto);
+		System.out.println("Stolovi od restorana posle"+stolovi.size());
+		
 	}
-	
+	*/
 	
 	public void addJelovnik(Jelovnik jelovnik){
 		if(jelovnik == null)
@@ -195,14 +184,14 @@ public class Restoran implements Serializable{
 				menadzeri.add(menadzer);
 	}
 	
-	public void removeSto(Sto sto){
+	/*public void removeSto(Sto sto){
 		if(sto == null)
 			return;
 		if(stolovi != null)
 			if(stolovi.contains(sto))
 				stolovi.remove(sto);
 			
-	}
+	}*/
 	
 	public void removeJelovnik(Jelovnik jelovnik){
 		if(jelovnik ==null)
@@ -212,6 +201,22 @@ public class Restoran implements Serializable{
 				this.jelovnik.remove(jelovnik);
 	}
 	
+	public Set<Rezervcija> getRezervacije() {
+		return rezervacije;
+	}
+
+	public void setRezervacije(Set<Rezervcija> rezervacije) {
+		this.rezervacije = rezervacije;
+	}
+
+	public void setMenadzeri(Set<Manager> menadzeri) {
+		this.menadzeri = menadzeri;
+	}
+
+	public void setJelovnik(Set<Jelovnik> jelovnik) {
+		this.jelovnik = jelovnik;
+	}
+
 	public void removeMenadzer(Manager menadzer){
 		if(menadzer == null)
 			return;
@@ -221,10 +226,13 @@ public class Restoran implements Serializable{
 	}
 	
 	
-	public void removeAllStolovi(){
+	/*public void removeAllStolovi(){
+		System.out.println("Pre brisanja svih stolova"+stolovi.size());
 		if(stolovi!=null)
 			stolovi.clear();
-	}
+		System.out.println("Posle brisanja svih stolova"+stolovi.size());
+		
+	}*/
 	
 	public void removeAllJelovnici(){
 		if(jelovnik!=null)

@@ -32,7 +32,7 @@
 		</fail>
 	</target>
 	
-	<target name="check-environment">
+	<target name="check-environment" depends="clean">
 		<antcall target="check-tomee" />
 	</target>
 
@@ -86,7 +86,7 @@
 	<!-- Ear -->
 	<target name="ear" depends="jar,war">
 		<mkdir dir="${dist}"/>
-		<ear destfile="${dist}/${earname}" appxml="${build}/META-INF/application.xml">
+		<ear update="True" destfile="${dist}/${earname}" appxml="${build}/META-INF/application.xml">
 			<zipfileset dir="${dist}">
 				<include name="${jarname}"/>
 				<include name="${warname}"/>
@@ -137,6 +137,11 @@
 			DROP TABLE IF EXISTS restoran_jelovnik;
 			DROP TABLE IF EXISTS jelovnik_jelo;
 			DROP TABLE IF EXISTS rezervacija;
+			DROP TABLE IF EXISTS restoran_sto;
+			DROP TABLE IF EXISTS rezervacija_gost;
+			DROP TABLE IF EXISTS pozvani;
+				
+	
 						
 						
 			

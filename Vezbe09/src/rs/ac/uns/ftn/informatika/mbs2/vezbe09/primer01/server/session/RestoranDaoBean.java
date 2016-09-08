@@ -12,7 +12,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Sto;
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 @Stateless
@@ -20,10 +20,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Sto;
 public class RestoranDaoBean extends GenericDaoBean<Restoran, Integer> implements
 		RestoranDaoLocal {
 
-	/**
-	 * Ucitava jelovnike u restoranu
-	 * Koristim kod menadzera
-	 */
+	
     @Override
     public HashSet<Jelovnik> ucitajJelovnike(Restoran k){
         Restoran kor = em.merge(k);
@@ -46,13 +43,15 @@ public class RestoranDaoBean extends GenericDaoBean<Restoran, Integer> implement
 		return restoran.getJelovnik();
 	}
 
-	@Override
+	/*@Override
 	public void addSto(Restoran restoran, Sto  sto) {
 		Restoran r = em.merge(restoran);
 		HashSet<Sto> stolovi = (HashSet<Sto>) r.getStolovi();
 		if(!stolovi.contains(sto))
+			System.out.println("Dodat sto");
 			stolovi.add(sto);
-	}
+			
+	}*/
 
 	@Override
 	public List<Restoran> pretragaRestorana(String s) {
@@ -64,6 +63,14 @@ public class RestoranDaoBean extends GenericDaoBean<Restoran, Integer> implement
 		return result;
 	}
 
+	/*@Override
+	public void obrisiStolove(Restoran r) {
+		Restoran restoran = em.merge(r);
+		restoran.getStolovi().clear();
+		em.persist(restoran);
+		
+	}
+*/
 
 
 	

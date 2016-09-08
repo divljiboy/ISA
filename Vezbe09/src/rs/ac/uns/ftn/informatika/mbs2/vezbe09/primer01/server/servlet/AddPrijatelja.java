@@ -16,7 +16,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.GostDaoLoc
 
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 public class AddPrijatelja extends HttpServlet {
@@ -30,7 +30,7 @@ public class AddPrijatelja extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-		HttpSession session=req.getSession();
+		/*HttpSession session=req.getSession();
 		
 		if(session.getAttribute("gost")!=null){
 			
@@ -39,7 +39,7 @@ public class AddPrijatelja extends HttpServlet {
 			session.setAttribute("nisuprijatelji", mogucaResenja);
 			session.setAttribute("prijatelji", gostDao.findPrijatelje(g));
 			getServletContext().getRequestDispatcher("/prijatelji.jsp").forward(req, resp);
-			}
+			}*/
 		
 	}
 
@@ -47,7 +47,7 @@ public class AddPrijatelja extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-		HttpSession session = req.getSession();
+	/*	HttpSession session = req.getSession();
 		
 		if(session.getAttribute("gost")!=null){
 			
@@ -60,7 +60,7 @@ public class AddPrijatelja extends HttpServlet {
 		//	HashSet<Gost> mogucaResenja = gostDao.findAllKojiMuNisuPrijatelji(gost);
 			req.setAttribute("prijatelji", mogucaResenja);
 			getServletContext().getRequestDispatcher("/addPrijatelj.jsp").forward(req, resp);
-		}
+		}*/
 	}
 
 }

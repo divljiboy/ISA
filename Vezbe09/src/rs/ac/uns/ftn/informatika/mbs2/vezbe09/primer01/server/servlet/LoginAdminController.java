@@ -16,7 +16,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.AdminDaoLo
 
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 public class LoginAdminController extends HttpServlet {

@@ -4,7 +4,7 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Admin;
 
 /**
  * 
- * @author Borko Arsovic
+ * @author 
  *
  */
 public interface AdminDaoLocal extends GenericDaoLocal<Admin, Integer> {
