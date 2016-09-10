@@ -1,8 +1,9 @@
 package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity;
 
+import static javax.persistence.CascadeType.ALL;
+import static javax.persistence.FetchType.LAZY;
+
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,12 +16,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="rezervacija")
-public class Rezervcija implements Serializable {
+public class Rezervacija implements Serializable {
 
 	private static final long serialVersionUID = -5575474153829623758L;
 
@@ -31,10 +33,11 @@ public class Rezervcija implements Serializable {
 	private int rezervacija_id;
 	
 
-	public Rezervcija() {
+	public Rezervacija() {
 		super();
 	}
-
+	@OneToMany(cascade = { ALL }, fetch = LAZY, mappedBy = "rezervacija")
+	private Set<Utisak> utisak = new HashSet<Utisak>();
 
 	@Column(name="od", unique = false, nullable = true)
 	private java.sql.Timestamp od;
@@ -45,6 +48,15 @@ public class Rezervcija implements Serializable {
 	
 	
 	
+	
+	public Set<Utisak> getUtisak() {
+		return utisak;
+	}
+
+
+	public void setUtisak(Set<Utisak> utisak) {
+		this.utisak = utisak;
+	}
 	@OneToOne()
 	@JoinColumn(name = "restoran_id" ,referencedColumnName="restoran_id", nullable = false)
 	public Restoran restoran;
@@ -67,7 +79,14 @@ public class Rezervcija implements Serializable {
 	
 
 	
-
+public void addPrijatelj(Gost g){
+	if(prijatelji==null){
+		prijatelji= new  HashSet<Gost>();
+	}
+	prijatelji.add(g);
+	
+	
+}
 
 
 
@@ -91,7 +110,7 @@ public class Rezervcija implements Serializable {
 	}
 
 
-	public Rezervcija(Timestamp od, Timestamp doo, Restoran restoran, Gost gost, Set<Gost> prijatelji, Sto sto) {
+	public Rezervacija(Timestamp od, Timestamp doo, Restoran restoran, Gost gost, Set<Gost> prijatelji, Sto sto) {
 		super();
 		this.od = od;
 		this.doo = doo;
@@ -153,6 +172,9 @@ public class Rezervcija implements Serializable {
 	public void setPrijatelji(Set<Gost> prijatelji) {
 		this.prijatelji = prijatelji;
 	}
+
+
+	
 	
 	
 

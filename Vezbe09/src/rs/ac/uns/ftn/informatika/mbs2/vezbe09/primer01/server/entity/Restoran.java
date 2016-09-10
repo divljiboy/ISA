@@ -61,7 +61,7 @@ public class Restoran implements Serializable{
 	private Set<Manager> menadzeri = new HashSet<Manager>();
 	
 	@OneToMany(cascade = { ALL }, fetch = LAZY, mappedBy = "restoran")
-	private Set<Rezervcija>  rezervacije = new HashSet<Rezervcija>();
+	private Set<Rezervacija>  rezervacije = new HashSet<Rezervacija>();
 
 	@ManyToMany
 	@JoinTable(name = "restoran_jelovnik", joinColumns = @JoinColumn(name = "restoran_id", referencedColumnName = "restoran_id"), inverseJoinColumns = @JoinColumn(name = "jelovnik_id", referencedColumnName = "jelovnik_id"))
@@ -201,11 +201,11 @@ public class Restoran implements Serializable{
 				this.jelovnik.remove(jelovnik);
 	}
 	
-	public Set<Rezervcija> getRezervacije() {
+	public Set<Rezervacija> getRezervacije() {
 		return rezervacije;
 	}
 
-	public void setRezervacije(Set<Rezervcija> rezervacije) {
+	public void setRezervacije(Set<Rezervacija> rezervacije) {
 		this.rezervacije = rezervacije;
 	}
 

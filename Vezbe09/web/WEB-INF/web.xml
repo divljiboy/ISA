@@ -79,6 +79,24 @@
 		<servlet-name>KonfiguracijaMesta1</servlet-name>
 		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.KonfiguracijaMesta1</servlet-class>
 	</servlet>
+	
+	
+	
+	
+	<servlet-mapping>
+		<servlet-name>OstaviUtisak</servlet-name>
+		<url-pattern>/OstaviUtisak</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>OstaviUtisak</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.OstaviUtisak</servlet-class>
+	</servlet>
+	
+	
+	
+
 
 	<servlet-mapping>
 		<servlet-name>RezervacijaController</servlet-name>
@@ -149,6 +167,20 @@
 		<servlet-name>ObrisiPrijatelja</servlet-name>
 		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.ObrisiPrijatelja</servlet-class>
 	</servlet>
+	
+	
+	
+	
+	<servlet-mapping>
+		<servlet-name>PotvrdaRezervacije</servlet-name>
+		<url-pattern>/PotvrdaRezervacije</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PotvrdaRezervacije</servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.PotvrdaRezervacije</servlet-class>
+	</servlet>
+	
 
 
 
@@ -315,6 +347,48 @@
 		<servlet-name>InitRestoranController</servlet-name>
 		<url-pattern>/InitRestoranController</url-pattern>
 	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>InitRezervacijeController </servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.InitRezervacijeController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>InitRezervacijeController</servlet-name>
+		<url-pattern>/InitRezervacijeController </url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>ObrisiRezervaciju </servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.ObrisiRezervaciju</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>ObrisiRezervaciju</servlet-name>
+		<url-pattern>/ObrisiRezervaciju </url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>InitPoseteController </servlet-name>
+		<servlet-class>rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet.InitPoseteController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>InitPoseteController</servlet-name>
+		<url-pattern>/InitPoseteController </url-pattern>
+	</servlet-mapping>
+
+
 
 
 

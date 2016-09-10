@@ -2,16 +2,24 @@ package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet;
 
 import java.io.IOException;
 import java.sql.Date;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 
 import javax.ejb.EJB;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +28,7 @@ import javax.servlet.http.HttpSession;
 
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran;
-import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Rezervcija;
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Rezervacija;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Sto;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.GostDaoLocal;
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDaoLocal;
@@ -35,6 +43,8 @@ import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.StoDaoLoca
 public class RezervacijaController extends HttpServlet {
 
 	private static final long serialVersionUID = -280662383637566334L;
+	final String emailaa = "oberon933@gmail.com";
+	final String passwordaaa = "ivan1993";
 
 	@EJB
 	RestoranDaoLocal restoranDao;
@@ -63,7 +73,7 @@ public class RezervacijaController extends HttpServlet {
 
 			req.setAttribute("rezervacijasto", sto);
 			req.setAttribute("prijatelji", prijatelji);
-			getServletContext().getRequestDispatcher("/rezervacija.jsp").forward(req, resp);
+			getServletContext().getRequestDispatcher("/novarezervacija.jsp").forward(req, resp);
 		}
 	}
 
@@ -80,12 +90,9 @@ public class RezervacijaController extends HttpServlet {
 			java.util.Date datum = null;
 			java.util.Date vreme = null;
 			Calendar c = Calendar.getInstance();
-			System.out.println(req.getParameter("datum") + "Vreme" + req.getParameter("vreme"));
 			try {
 				datum = new SimpleDateFormat("yyyy-MM-dd").parse(req.getParameter("datum"));
-				System.out.println("Datum posle parsiranja" + datum.toString());
 				vreme = new SimpleDateFormat("hh:mm").parse(req.getParameter("vreme"));
-				System.out.println("Vreme posle parsiranja" + vreme);
 				datum = new Date(datum.getTime() + vreme.getTime());
 				c.setTime(datum);
 
@@ -101,17 +108,11 @@ public class RezervacijaController extends HttpServlet {
 
 			Sto sto = stoDao.findById(Integer.valueOf(req.getParameter("rezsto")));
 			String[] prijatelji = req.getParameterValues("prija");
-			Set<Gost> gosti = new HashSet<Gost>();
-			for (int i = 0; i < prijatelji.length; i++) {
-				System.out.println(prijatelji[i]);
-				Gost g = gostDao.findById(Integer.valueOf(prijatelji[i]));
-				gosti.add(g);
+			
 
-			}
-
-			Rezervcija r = new Rezervcija(od, doo, restoran, bla, gosti, sto);
-			List<Rezervcija> sverezervacije = rezervacijaDao.findAll();
-			boolean flag=true;
+			Rezervacija r = new Rezervacija(od, doo, restoran, bla, null, sto);
+			List<Rezervacija> sverezervacije = rezervacijaDao.findAll();
+			boolean flag = true;
 
 			for (int i = 0; i < sverezervacije.size(); i++) {
 				if (sverezervacije.get(i).getRestoran().getId() == restoran.getId()) {
@@ -119,19 +120,55 @@ public class RezervacijaController extends HttpServlet {
 						if (!((od.before(sverezervacije.get(i).getOd()) && doo.before(sverezervacije.get(i).getOd()))
 								|| (od.after(sverezervacije.get(i).getDoo())
 										&& doo.after(sverezervacije.get(i).getDoo())))) {
-							flag=false;
+							flag = false;
 							resp.sendRedirect("http://localhost:8080/Vezbe09/rezervacija.jsp?Nijeuspelo");
 							break;
-						} 
+						}
 					}
 				}
 
 			}
-			if(flag==true)
-			{
-				rezervacijaDao.merge(r);
-				resp.sendRedirect("http://localhost:8080/Vezbe09/home.jsp");
+			if (flag == true) {
+				Rezervacija asd = rezervacijaDao.merge(r);
 				
+				List<Gost> gosti = new ArrayList<Gost>();
+				for (int i = 0; i < prijatelji.length; i++) {
+					Gost g = gostDao.findById(Integer.valueOf(prijatelji[i]));
+					gosti.add(g);
+
+				}
+
+				Properties props = new Properties();
+				props.put("mail.smtp.starttls.enable", "true");
+				props.put("mail.smtp.auth", "true");
+				props.put("mail.smtp.host", "smtp.gmail.com");
+				props.put("mail.smtp.port", "587");
+
+				Session session1 = Session.getInstance(props, new javax.mail.Authenticator() {
+					protected PasswordAuthentication getPasswordAuthentication() {
+						return new PasswordAuthentication(emailaa, passwordaaa);
+					}
+				});
+
+				for(int i=0;i<gosti.size();i++){
+				try {
+
+					Message message = new MimeMessage(session1);
+					message.setFrom(new InternetAddress(emailaa));
+					message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("ivan93.ns@hotmail.com"));
+					message.setSubject("Potvrda rezervacije");
+					message.setText("Ovde mozete potvrditi dolazak na rezervaciju "
+							+ "http://localhost:8080/Vezbe09/PotvrdaRezervacije?idrez=" + asd.getRezervacija_id() + "&idkor="
+							+ gosti.get(i).getId());
+
+					Transport.send(message);
+
+				} catch (MessagingException e) {
+					throw new RuntimeException(e);
+				}}
+
+				resp.sendRedirect("http://localhost:8080/Vezbe09/home.jsp");
+
 			}
 
 		}

@@ -1,9 +1,11 @@
-<%@page
-	import="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost"%>
+<%@page import="com.sun.crypto.provider.RSACipher"%>
+
+<%@page import="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost"%>
 <%
-	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("Cache-Control",
+			"no-cache, no-store, must-revalidate");
 	response.setHeader("Pragma", "no-cache");
-	response.setDateHeader("Expires", 0);
+	response.setDateHeader("Expires",0);
 %>
 <%@page
 	import="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Restoran"%>
@@ -19,81 +21,29 @@
 
 <html>
 <head>
-<script src="./menuvertical.js" type="text/javascript"></script>
+
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="./home.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet"
-	href="path/to/font-awesome/css/font-awesome.min.css">
 
-<script type="text/javascript">
-	function pr() {
-		var x = document.URL;
-		if (x === "http://localhost:8080/Vezbe09/prijatelji.jsp?Nijeuspelo") {
-			alert("Vec postoji u listi prijatelja!");
-		}
-	}
-</script>
+	
+	<script src="sorttable.js"></script>
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">
 	<c:redirect url="./start.jsp" />
 </c:if>
 
-<body onload="pr()">
-	<div id="wrapper">
+<body>
+	<jsp:include page="./navbar.jsp" />
 
 
 
 		<c:if test="${sessionScope.admin!=null}">
-			<jsp:useBean id="korisniciSistema"
-				type="java.util.List<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost>"
-				scope="session" />
-			<ul>
-				<li><a href="./InitRestoranController"><i
-						class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="./InitKorisniciController"><i
-						class="fa fa-users"></i>
-						<div>
-							<fmt:message key="korisnici" />
-						</div></a></li>
-				<li><a href="./InitMenadzerController"><i
-						class="fa fa-user"></i>
-						<div>
-							<fmt:message key="menadzeri" />
-						</div></a></li>
-				<li><a href="InitJelovniciController"><i
-						class="fa fa-glass"></i>
-						<div>
-							<fmt:message key="jelovnici" />
-						</div></a></li>
-
-				<li><a href="InitJelaController"><i class="fa fa-lemon-o"></i>
-						<div>
-							<fmt:message key="jela" />
-						</div></a></li>
-
-				<li><a href="home.jsp"><i class="fa fa-rocket"></i>
-						<div>
-							<c:out value="${admin.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${admin.lastName}"></c:out>
-						</div></a></li>
-				</li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-			</ul>
+		<jsp:useBean id="korisniciSistema" type="java.util.List<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost>" scope="session" />
+			
 
 			<form>
-				<table>
+				<table class="sortable">
 					<thead>
 						<tr>
 							<th>Ime</th>
@@ -120,75 +70,65 @@
 
 
 		<c:if test="${sessionScope.gost!=null}">
-			<ul>
+			<jsp:useBean id="prijatelji" type="java.util.HashSet<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost>"
+				scope="session" />
+				<jsp:useBean id="nisuprijatelji" type="java.util.HashSet<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Gost>"
+				scope="session" />
+			
 
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="./PrijateljiController"><i class="fa fa-users"></i>
-						<div>
-							<fmt:message key="prijatelji" />
-						</div></a></li>
-
-				<li><a href="mojeposete.jsp"></i><i class="fa fa-thumbs-up"></i>
-						<div>
-							<fmt:message key="mojeposete" />
-						</div></a></li>
-
-				<li><a href="home.jsp"><i class="fa fa-user"></i>
-						<div>
-							<c:out value="${gost.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${gost.lastName}"></c:out>
-						</div></a></li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-			</ul>
-
-			<table>
+			<form>
+			<table class="sortable">
+			<thead>
 				<tr>
 					<th>Ime</th>
 					<th>Prezime</th>
-					<th>&nbsp;</th>
-					
+					<th></th>
 				</tr>
-
-				<c:forEach items="${prijatelji}" var="prijatelj">
+			</thead>
+			<tbody>
+				<c:forEach items="${prijatelji}" var="pr">
 					<tr>
-						<td>${prijatelj.firstName}</td>
-						<td>${prijatelj.lastName}</td>
-						<td><a href="./IzbrisiPrijatelja?id=${prijatelj.id}">Izbrisi</a></td>
+						<td>${pr.firstName}</td>
+						<td>${pr.lastName}</td>
+						<td><a href="./ObrisiPrijatelja?id=${pr.id}">Obrisi prijatelja</a></td>
 					</tr>
 				</c:forEach>
-			</table>
 
-			<form>
+			</tbody>	
+			</table>
+		</form>	
+		
+		<form action="./AddPrijatelja" method="post">
 				<table>
 					<thead>
 						<tr>
+							<th colspan="2"><input type="text" name="imePrezime"
+								placeholder="Unesite ime ili prezime"></th>
+							<th colspan="2"><input type="submit" value="Pretrazi"></th>
+						</tr>
+
+						<tr>
 							<th>Ime</th>
 							<th>Prezime</th>
-
-
+							<th>&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${nisuprijatelji}" var="korisnik">
+						<c:forEach items="${nisuprijatelji}" var="pri">
 							<tr>
-								<td>${korisnik.firstName}</td>
-								<td>${korisnik.lastName}</td>
-								<td><a href="./DodajPrijatelja?id=${korisnik.id}">Dodaj</a></td>
+								<td>${pri.firstName}</td>
+								<td>${pri.lastName}</td>
+								<td><a href="./DodajPrijatelja?id=${pri.id}">Dodaj</a></td>
 							</tr>
-
 						</c:forEach>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
 					</tbody>
 				</table>
 			</form>
-
 
 		</c:if>
 
@@ -196,37 +136,8 @@
 
 
 		<c:if test="${sessionScope.menadzer!=null}">
-			<ul>
-				<li><a href="restorani.jsp"><i class="fa fa-cutlery"></i>
-						<div>
-							<fmt:message key="restorani" />
-						</div></a></li>
-				<li><a href="#"><i class="fa fa-users"></i>
-						<div>
-							<fmt:message key="prijatelji" />
-						</div></a></li>
-				<li><a href="#"><i class="fa fa-user"></i>
-						<div>
-							<fmt:message key="mojNalog" />
-						</div></a></li>
-
-				<li><a href="./LogoutController"><i
-						class="fa fa-paper-plane"></i>
-						<div>
-							<c:out value="${menadzer.firstName}"></c:out>
-							&nbsp;&nbsp;
-							<c:out value="${menadzer.lastName}"></c:out>
-						</div> </a></li>
-				<li><a href="./LogoutController"><i
-						class="fa fa-times-circle-o"></i>
-						<div>
-							<fmt:message key="odjava" />
-						</div> </a></li>
-
-			</ul>
+			
 		</c:if>
-
-	</div>
 
 
 </body>

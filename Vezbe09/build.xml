@@ -140,6 +140,7 @@
 			DROP TABLE IF EXISTS restoran_sto;
 			DROP TABLE IF EXISTS rezervacija_gost;
 			DROP TABLE IF EXISTS pozvani;
+			DROP TABLE IF EXISTS utisak;
 				
 	
 						

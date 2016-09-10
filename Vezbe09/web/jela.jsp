@@ -2,8 +2,7 @@
 <%@page
 	import="rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelo"%>
 <%
-	response.setHeader("Cache-Control",
-			"no-cache, no-store, must-revalidate");
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	response.setHeader("Pragma", "no-cache");
 	response.setDateHeader("Expires", 0);
 %>
@@ -36,70 +35,70 @@
 
 
 
-		<c:if test="${sessionScope.admin!=null}">
-			<jsp:useBean id="svaJela"
-				type="java.util.List<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelo>"
-				scope="session" />
-			
-
-			<form>
-				<table>
-					<thead>
-						<tr>
-							<th>Naziv</th>
-							<th>Opis</th>
-							<th>Cena</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${svaJela}" var="jelo">
-							<tr>
-								<td>${jelo.naziv}</td>
-								<td>${jelo.opis}</td>
-								<td>${jelo.cena}</td>
-
-							</tr>
-
-						</c:forEach>
-					</tbody>
-				</table>
-			</form>
-		</c:if>
+	<c:if test="${sessionScope.admin!=null}">
+		<jsp:useBean id="svaJela"
+			type="java.util.List<rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.entity.Jelo>"
+			scope="session" />
 
 
-
-		<c:if test="${sessionScope.gost!=null}">
-			
-
+		<form>
 			<table>
-				<tr>
-					<th>Ime</th>
-					<th>Prezime</th>
-					<th>&nbsp;</th>
-					<th>&nbsp;</th>
-				</tr>
-
-				<c:forEach items="${gosti}" var="prijatelj">
+				<thead>
 					<tr>
-						<td>${prijatelj.firstName}</td>
-						<td>${prijatelj.lastName}</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
+						<th>Naziv</th>
+						<th>Opis</th>
+						<th>Cena</th>
 					</tr>
-				</c:forEach>
+				</thead>
+				<tbody>
+					<c:forEach items="${svaJela}" var="jelo">
+						<tr>
+							<td>${jelo.naziv}</td>
+							<td>${jelo.opis}</td>
+							<td>${jelo.cena}</td>
+
+						</tr>
+
+					</c:forEach>
+				</tbody>
 			</table>
-
-
-		</c:if>
-
+		</form>
+	</c:if>
 
 
 
-		<c:if test="${sessionScope.menadzer!=null}">
-			
-		</c:if>
+	<c:if test="${sessionScope.gost!=null}">
 
-	</div>
+
+		<table>
+			<tr>
+				<th>Ime</th>
+				<th>Prezime</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+			</tr>
+
+			<c:forEach items="${gosti}" var="prijatelj">
+				<tr>
+					<td>${prijatelj.firstName}</td>
+					<td>${prijatelj.lastName}</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+			</c:forEach>
+		</table>
+
+
+	</c:if>
+
+
+
+
+	<c:if test="${sessionScope.menadzer!=null}">
+
+	</c:if>
+
+	
 
 
 </body>

@@ -103,7 +103,7 @@
 				 
 
 				<div class="form-group">
-					<label class="col-md-4 control-label" for="textinput">Restoran</label>
+					<label class="col-md-4 control-label" for="textinput">Trajanje</label>
 					<div class="col-md-4">
 						<input type="number" name="trajanje">
 					</div>
@@ -123,8 +123,7 @@
 				</tr>
 				 -->
 				<div class="form-group">
-					<label class="col-md-4 control-label" for="selectmultiple">Pozovi
-						prijatelje:</label>
+					<label class="col-md-4 control-label" for="selectmultiple">Sto:</label>
 					<div class="col-md-4">
 						<select name="rezsto">
 							<c:forEach items="${rezervacijasto}" var="p">
