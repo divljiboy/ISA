@@ -80,4 +80,20 @@ public class GostDaoBean extends GenericDaoBean<Gost, Integer> implements GostDa
 			em.persist(g);
 	}
 
+	@Override
+	public Set<Gost> findImeiPrezime(String imeIliPrezimem,Gost g) {
+
+		Gost gost = em.merge(g);
+		
+		Set<Gost> nisuprijatelji = findAllKojiMuNisuPrijatelji(gost);
+		Set<Gost> lista =new  HashSet<Gost>();
+
+		for (Gost gst : nisuprijatelji) {
+			if (gst.getFirstName().contains(imeIliPrezimem)|| gst.getLastName().contains(imeIliPrezimem)) {
+				lista.add(gst);
+			}
+		}
+		return lista;
+	}
+
 }

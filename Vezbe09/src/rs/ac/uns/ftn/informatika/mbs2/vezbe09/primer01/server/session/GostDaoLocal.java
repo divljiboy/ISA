@@ -23,4 +23,6 @@ public interface GostDaoLocal extends GenericDaoLocal<Gost, Integer> {
 	Set<Gost> findAllKojiMuNisuPrijatelji(Gost g);
 	
 	void dodajPrijatelja(Gost g,Gost g1);
+
+	Set<Gost> findImeiPrezime(String imeIliPrezime,Gost g);
 }

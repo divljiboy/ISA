@@ -46,8 +46,6 @@ public class LoginController extends HttpServlet {
 				
 				HttpSession session = request.getSession();
 				session.setAttribute("gost", gost);
-//				log.info("Korisnik " + korisnik.getKorisnickoImeKorisnika() + " se prijavio.");
-	//			getServletContext().getRequestDispatcher("/ReadController").forward(request, response);
 				getServletContext().getRequestDispatcher("/home.jsp").forward(request, response);
 			}
 			

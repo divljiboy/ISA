@@ -47,7 +47,7 @@ public class AddPrijatelja extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-	/*	HttpSession session = req.getSession();
+		HttpSession session = req.getSession();
 		
 		if(session.getAttribute("gost")!=null){
 			
@@ -55,12 +55,11 @@ public class AddPrijatelja extends HttpServlet {
 			String imeIliPrezime = req.getParameter("imePrezime");
 			System.out.println(imeIliPrezime);
 			
-			Set<Gost> mogucaResenja = gostDao.findAllKojiMuNisuPrijatelji(gost);
-			System.out.println(mogucaResenja.size());
-		//	HashSet<Gost> mogucaResenja = gostDao.findAllKojiMuNisuPrijatelji(gost);
-			req.setAttribute("prijatelji", mogucaResenja);
-			getServletContext().getRequestDispatcher("/addPrijatelj.jsp").forward(req, resp);
-		}*/
+			Set<Gost> mogucaResenja = gostDao.findImeiPrezime(imeIliPrezime,gost);
+			//	HashSet<Gost> mogucaResenja = gostDao.findAllKojiMuNisuPrijatelji(gost);
+			req.setAttribute("nisuprijatelji", mogucaResenja);
+			getServletContext().getRequestDispatcher("/prijatelji.jsp").forward(req, resp);
+		}
 	}
 
 }

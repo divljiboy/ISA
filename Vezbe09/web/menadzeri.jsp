@@ -24,7 +24,8 @@
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-
+<link href="./bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+<link href="./bootstrap.min.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 	function pr() {
 		var x = document.URL;

@@ -15,7 +15,8 @@
 <head>
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
+<link href="./bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+<link href="./bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">

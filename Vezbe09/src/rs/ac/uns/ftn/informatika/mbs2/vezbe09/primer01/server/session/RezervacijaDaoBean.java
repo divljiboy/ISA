@@ -29,8 +29,14 @@ public class RezervacijaDaoBean extends GenericDaoBean<Rezervacija, Integer> imp
 			if (lista.get(i).getGost().equals(gost)) {
 				if (lista.get(i).getOd().after(currentTimestamp)) {
 					rezervacije.add(lista.get(i));
-					}
+				}
 			}
+			else if(lista.get(i).getPrijatelji().contains(gost)){
+					if (lista.get(i).getOd().after(currentTimestamp)) {
+						rezervacije.add(lista.get(i));
+					}
+				}
+			
 		}
 		return rezervacije;
 	}
@@ -50,6 +56,13 @@ public class RezervacijaDaoBean extends GenericDaoBean<Rezervacija, Integer> imp
 			if (lista.get(i).getGost().equals(gost)) {
 				if (lista.get(i).getDoo().before(currentTimestamp)) {
 					rezervacije.add(lista.get(i));
+				}
+			}
+			
+			else if(lista.get(i).getPrijatelji().contains(gost)){
+				if (lista.get(i).getDoo().before(currentTimestamp)) {
+					rezervacije.add(lista.get(i));
+					System.out.println("usao u rezervacije");
 				}
 			}
 		}

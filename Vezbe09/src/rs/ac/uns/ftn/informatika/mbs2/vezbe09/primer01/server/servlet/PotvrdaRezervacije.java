@@ -52,26 +52,27 @@ public class PotvrdaRezervacije extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		HttpSession session = req.getSession();
-		
 		Integer idrez=Integer.valueOf((String) req.getParameter("idrez"));
 		Integer idgost=Integer.valueOf((String) req.getParameter("idgost"));
-		if (session.getAttribute("gost") != null) {
+			System.out.println("Usao sam u rezervaciju");
+			String act = req.getParameter("button");
+			if (act.equals("OK")) {
+
+				if(idrez!=null && idgost!=null){
+					Gost g=gostDao.findById(idgost);
+					Rezervacija r= rezervacijaDao.findById(idrez);
+					
+				rezervacijaDao.dodajPrijateljaZaRezerv(r,g);
+				
+				getServletContext().getRequestDispatcher("/potvrdno.jsp").forward(req, resp);
+				}
+				
+				
+			} else if (act.equals("CANCEL")) {
+				getServletContext().getRequestDispatcher("/odbijanje.jsp").forward(req, resp);
+				
+			} 
 			
-		if(idrez!=null && idgost!=null){
-			Gost g=gostDao.findById(idgost);
-			Rezervacija r= rezervacijaDao.findById(idrez);
-			
-		
-		rezervacijaDao.dodajPrijateljaZaRezerv(r,g);
-		
-		getServletContext().getRequestDispatcher("/potvrdno.jsp").forward(req, resp);
-		}
-		else
-		{
-			getServletContext().getRequestDispatcher("/odbijanje.jsp").forward(req, resp);
-			
-		}}
 	}
 
 }

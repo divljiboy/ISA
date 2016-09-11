@@ -28,10 +28,6 @@
 
 
 </head>
-<c:if
-	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">
-	<c:redirect url="./start.jsp" />
-</c:if>
 
 <body>
 	

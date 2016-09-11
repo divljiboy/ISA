@@ -89,7 +89,7 @@ function pr() {
 
 			<c:forEach items="${mojiutisci}" var="r">
 				<tr>
-					<td>${r.rezervacija.restoran.naziv}</td>
+					<td>${r.id}</td>
 					<td>${r.ocena}</td>
 					<td>${r.opis}</td>
 

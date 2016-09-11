@@ -20,7 +20,8 @@
 
 <html>
 <head>
-
+<link href="./bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+<link href="./bootstrap.min.css" rel="stylesheet" type="text/css" />
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
@@ -37,30 +38,7 @@
 	}
 </script>
 
-<script>
-function getCellRow(td){
-    td= td? td.target:window.event? event.srcElement:'';
-    var rc= [], pa= td.parentNode;
-    if(pa.tagName== 'TR'){
-      //  alert([pa.rowIndex, td.cellIndex]);
-        var x = document.getElementsByTagName('table')[0].rows[pa.rowIndex].cells;
-        //document.location = "http://localhost:8080/Vezbe09/KonfiguracijaMesta1?red="+pa.rowIndex+"&kolona="+td.cellIndex;
-    }
-}
-window.onload= function(){
-    document.getElementsByTagName('table')[0].onclick=getCellRow;
-}
 
-
-
-
-$('your_table').observe('click', function(event) {
-	  var clickedCell = event.findElement('td');
-	  if (clickedCell) {
-	   clickedCell.setStyle({ background: '#dfd' });
-	  }
-	});
-</script>
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">

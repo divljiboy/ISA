@@ -27,8 +27,8 @@ public class InitBean implements Init {
 	public void init() {
 
 		Admin admin = new Admin();
-		admin.setFirstName("Borko");
-		admin.setLastName("Arsovic");
+		admin.setFirstName("Ivan");
+		admin.setLastName("Divljak");
 		admin.setUsername("a");
 		admin.setPassword("a");
 		em.persist(admin);
@@ -75,18 +75,7 @@ public class InitBean implements Init {
 		gost6.setPassword("gost6");
 		em.persist(gost6);
 
-		/*
-		 * Set<Gost>prijatelji1= new HashSet<Gost>(); prijatelji1.add(gost2);
-		 * prijatelji1.add(gost3); prijatelji1.add(gost4);
-		 * 
-		 * Set<Gost>prijatelji2= new HashSet<Gost>(); prijatelji1.add(gost1);
-		 * prijatelji1.add(gost3);
-		 * 
-		 * Set<Gost>prijatelji3= new HashSet<Gost>(); prijatelji1.add(gost1);
-		 * 
-		 * gost1.setPrijatelji(prijatelji1); gost2.setPrijatelji(prijatelji2);
-		 * gost3.setPrijatelji(prijatelji3);
-		 */
+		
 		gost1.dodajPrijateljaa(gost2);
 		gost1.dodajPrijateljaa(gost3);
 		gost2.dodajPrijateljaa(gost4);

@@ -40,7 +40,6 @@ public class DodajJelovnik extends HttpServlet {
 		if(session.getAttribute("menadzer")!=null){
 			Manager m=(Manager)session.getAttribute("menadzer");
 			Restoran r = m.getRestoran();
-//			HashSet<Jelovnik> jelovnici = restoranDao.dodajJelovnikURestoran(r,j);
 			session.setAttribute("restoran", r);
 			getServletContext().getRequestDispatcher("/dodavanjeJelovnika.jsp").forward(req, resp);
 		}

@@ -11,7 +11,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt"%>
 
-
+<jsp:useBean id="restorani" type="java.util.List<Restoran>"
+				scope="session" />
 
 <fmt:setBundle basename="messages.messages" />
 
@@ -21,7 +22,8 @@
 
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
+<link href="./bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+<link href="./bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <c:if
 	test="${sessionScope.admin==null && sessionScope.gost==null && sessionScope.menadzer==null}">
@@ -56,11 +58,24 @@
 					<td>Lozinka:</td>
 					<td><input type="text" name="lozinka" required="required"></td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<td>Id restorana:</td>
 					<td><input type="number" name="id_restorana"
 						required="required"></td>
 				</tr>
+				 -->
+						
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="selectmultiple">Restoran:</label>
+					<div class="col-md-4">
+						<select name="id_restorana">
+							<c:forEach items="${restorani}" var="p">
+								<option value="${p.id}">${p.naziv}</option>
+
+							</c:forEach>
+						</select>
+					</div>
+				</div>
 
 
 				<tr>

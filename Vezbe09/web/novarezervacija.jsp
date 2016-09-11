@@ -25,7 +25,8 @@
 
 <html>
 <head>
-
+<link href="./bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+<link href="./bootstrap.min.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 	function pr() {
 		var x = document.URL;
@@ -108,20 +109,7 @@
 						<input type="number" name="trajanje">
 					</div>
 				</div>
-				<!-- <tr>
-					<td>Trajanje:</td>
-					<td><input type="number" name="trajanje"></td>
-				</tr> -->
-				<!-- <tr>
-					<td>Izaberi sto:</td>
-					<td><select name="rezsto">
-							<c:forEach items="${rezervacijasto}" var="p">
-								<option value="${p.id}">${p.pozicija}</option>
-
-							</c:forEach>
-					</select></td>
-				</tr>
-				 -->
+				
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="selectmultiple">Sto:</label>
 					<div class="col-md-4">
@@ -134,18 +122,9 @@
 					</div>
 				</div>
 
-				<!--  <tr>
-					<td>Pozovi prijatelje:</td>
-					<td><select name="prija" multiple>
-							<c:forEach items="${prijatelji}" var="p">
-								<option value="${p.id}">${p.firstName}${p.lastName}</option>
+				
+				
 
-							</c:forEach>
-					</select></td>
-				</tr>
-				
-				
--->
 
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="selectmultiple">Pozovi

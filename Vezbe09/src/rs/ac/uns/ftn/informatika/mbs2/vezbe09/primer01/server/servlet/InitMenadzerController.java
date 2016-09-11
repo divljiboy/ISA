@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.ManagerDaoLocal;
+import rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.session.RestoranDaoLocal;
 
 public class InitMenadzerController extends HttpServlet {
 
@@ -17,6 +18,8 @@ public class InitMenadzerController extends HttpServlet {
 
 	@EJB
 	ManagerDaoLocal manDao;
+	@EJB
+	RestoranDaoLocal restoranDao;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -26,6 +29,8 @@ public class InitMenadzerController extends HttpServlet {
 		
 		if(session.getAttribute("admin")!=null){
 			session.setAttribute("menadzeriSistema", manDao.findAll());
+			session.setAttribute("restorani", restoranDao.findAll());
+			
 			getServletContext().getRequestDispatcher("/menadzeri.jsp").forward(req, resp);
 		}
 		

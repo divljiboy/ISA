@@ -2,6 +2,7 @@ package rs.ac.uns.ftn.informatika.mbs2.vezbe09.primer01.server.servlet;
 
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.ejb.EJB;
@@ -57,7 +58,11 @@ public class OstaviUtisak extends HttpServlet {
 			String utisak = req.getParameter("utisak");
 			Integer ocena = Integer.valueOf(req.getParameter("radios"));
 			Utisak u = new Utisak(utisak, ocena, gost, r);
+			
+			
 			utisakDao.merge(u);
+			
+			
 
 			Set<Rezervacija> bla = rezervacijaDao.getPoseteodKorisnika(gost);
 

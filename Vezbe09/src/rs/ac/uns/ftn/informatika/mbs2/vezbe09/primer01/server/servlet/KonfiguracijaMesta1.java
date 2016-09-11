@@ -47,7 +47,7 @@ public class KonfiguracijaMesta1 extends HttpServlet {
 
 			}
 			session.setAttribute("restoran", m.getRestoran());
-			getServletContext().getRequestDispatcher("/konfiguracijaMesta.jsp").forward(req, resp);
+			getServletContext().getRequestDispatcher("/home.jsp").forward(req, resp);
 		}
 	}
 }
